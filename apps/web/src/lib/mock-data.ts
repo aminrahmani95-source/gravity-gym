@@ -129,6 +129,12 @@ export const MOCK_CLASSES: any[] = [
     title: 'تمرینات کراس‌فیت و آماده‌سازی جسمانی پیشرفته',
     coachId: 'coach-1',
     coachName: 'استاد بهزاد فیاض',
+    coach: {
+      id: 'coach-1',
+      displayName: 'استاد بهزاد فیاض',
+      sports: ['کراس‌فیت', 'فیتنس'],
+      experienceYears: 8,
+    },
     categorySlug: 'crossfit',
     categoryNameFa: 'کراس‌فیت',
     description: 'دوره فشرده افزایش توان هوازی، استقامت عضلانی و چربی‌سوزی با متد به‌روز بین‌المللی.',
@@ -137,16 +143,36 @@ export const MOCK_CLASSES: any[] = [
     difficulty: 'INTERMEDIATE',
     venueType: 'IN_PERSON',
     venueName: 'مجموعه ورزشی ستاره ونک',
+    venue: {
+      id: 'v-3',
+      nameFa: 'مجموعه ورزشی ستاره ونک',
+      district: 'ونک',
+      addressFa: 'میدان ونک، خیابان ملاصدرا، پلاک ۱۰',
+      venueType: 'IN_PERSON',
+    },
     singleSessionPriceTomans: 180000,
     hasMonthlyPlan: true,
     monthlyPlanPriceTomans: 1200000,
     sessionsCount: 8,
+    monthlyPlan: {
+      id: 'mp-1',
+      title: 'بسته طلایی ماهانه کراس‌فیت (۸ جلسه)',
+      priceTomans: 1200000,
+      sessionsCount: 8,
+      validityDays: 30,
+    },
   },
   {
     id: 'class-2',
     title: 'پیلاتس تخصصی و اصلاح وضعیت بدنی',
     coachId: 'coach-2',
     coachName: 'مریم سهرابی',
+    coach: {
+      id: 'coach-2',
+      displayName: 'مریم سهرابی',
+      sports: ['پیلاتس', 'یوگا'],
+      experienceYears: 6,
+    },
     categorySlug: 'pilates',
     categoryNameFa: 'پیلاتس',
     description: 'تقویت عضلات مرکزی، اصلاح پاسچر، افزایش انعطاف‌پذیری و کاهش دردهای کمری و مفصلی.',
@@ -155,45 +181,100 @@ export const MOCK_CLASSES: any[] = [
     difficulty: 'ALL_LEVELS',
     venueType: 'IN_PERSON',
     venueName: 'باشگاه اکسیژن رویال',
+    venue: {
+      id: 'v-2',
+      nameFa: 'باشگاه اکسیژن رویال',
+      district: 'سعادت‌آباد',
+      addressFa: 'بلوار سرو غربی، خیابان صدف',
+      venueType: 'IN_PERSON',
+    },
     singleSessionPriceTomans: 150000,
     hasMonthlyPlan: true,
     monthlyPlanPriceTomans: 950000,
     sessionsCount: 12,
+    monthlyPlan: {
+      id: 'mp-2',
+      title: 'بسته ماهانه پیلاتس (۱۲ جلسه)',
+      priceTomans: 950000,
+      sessionsCount: 12,
+      validityDays: 30,
+    },
   }
 ];
 
 export const MOCK_CATEGORIES = [
-  { slug: 'fitness', nameFa: 'فیتنس و تناسب اندام' },
-  { slug: 'crossfit', nameFa: 'کراس‌فیت' },
-  { slug: 'pilates', nameFa: 'پیلاتس و حرکات اصلاحی' },
-  { slug: 'swimming', nameFa: 'شنا و ورزش‌های آبی' },
-  { slug: 'bodybuilding', nameFa: 'بدنسازی و پرورش اندام' },
+  { id: 'cat-1', slug: 'fitness', nameFa: 'فیتنس و تناسب اندام' },
+  { id: 'cat-2', slug: 'crossfit', nameFa: 'کراس‌فیت' },
+  { id: 'cat-3', slug: 'pilates', nameFa: 'پیلاتس و حرکات اصلاحی' },
+  { id: 'cat-4', slug: 'swimming', nameFa: 'شنا و ورزش‌های آبی' },
+  { id: 'cat-5', slug: 'bodybuilding', nameFa: 'بدنسازی و پرورش اندام' },
 ];
 
 export const MOCK_VENUES = [
-  { id: 'v-1', nameFa: 'کلاب ورزشی هتل اسپیناس پالاس', district: 'سعادت‌آباد' },
-  { id: 'v-2', nameFa: 'باشگاه اکسیژن رویال', district: 'سعادت‌آباد' },
-  { id: 'v-3', nameFa: 'مجموعه ورزشی ستاره ونک', district: 'ونک' },
+  { id: 'v-1', nameFa: 'کلاب ورزشی هتل اسپیناس پالاس', district: 'سعادت‌آباد', venueType: 'GRAVITY_GYM' },
+  { id: 'v-2', nameFa: 'باشگاه اکسیژن رویال', district: 'سعادت‌آباد', venueType: 'PARTNER_GYM' },
+  { id: 'v-3', nameFa: 'مجموعه ورزشی ستاره ونک', district: 'ونک', venueType: 'PARTNER_GYM' },
+];
+
+export const MOCK_SESSIONS = [
+  {
+    id: 'sess-1',
+    classId: 'class-1',
+    startTime: new Date(Date.now() + 86400000).toISOString(),
+    endTime: new Date(Date.now() + 86400000 + 75 * 60000).toISOString(),
+    capacity: 12,
+    reservedSeats: 4,
+    availableSeats: 8,
+    status: 'SCHEDULED',
+    instructorName: 'استاد بهزاد فیاض',
+  },
+  {
+    id: 'sess-2',
+    classId: 'class-1',
+    startTime: new Date(Date.now() + 86400000 * 3).toISOString(),
+    endTime: new Date(Date.now() + 86400000 * 3 + 75 * 60000).toISOString(),
+    capacity: 12,
+    reservedSeats: 6,
+    availableSeats: 6,
+    status: 'SCHEDULED',
+    instructorName: 'استاد بهزاد فیاض',
+  },
 ];
 
 export function getMockFallback(endpoint: string): any | null {
   const cleanEndpoint = endpoint.split('?')[0];
 
-  if (cleanEndpoint === '/gyms') return MOCK_GYMS;
-  if (cleanEndpoint.startsWith('/gyms/')) {
-    const id = cleanEndpoint.replace('/gyms/', '').split('/')[0];
-    const found = MOCK_GYMS.find(g => g.id === id) || MOCK_GYMS[0];
-    if (cleanEndpoint.endsWith('/sans')) return found.sans || [];
-    return found;
+  // Specific exact routes first
+  if (cleanEndpoint === '/classes/categories') return MOCK_CATEGORIES;
+  if (cleanEndpoint === '/classes/venues') return MOCK_VENUES;
+  if (cleanEndpoint === '/classes/member/my-plans') return [];
+
+  // Parametric class routes
+  if (cleanEndpoint.startsWith('/classes/') && cleanEndpoint.endsWith('/sessions')) {
+    return MOCK_SESSIONS;
   }
-  if (cleanEndpoint === '/plans') return MOCK_PLANS;
-  if (cleanEndpoint === '/classes') return MOCK_CLASSES;
   if (cleanEndpoint.startsWith('/classes/')) {
     const id = cleanEndpoint.replace('/classes/', '').split('/')[0];
     return MOCK_CLASSES.find(c => c.id === id) || MOCK_CLASSES[0];
   }
-  if (cleanEndpoint === '/classes/categories') return MOCK_CATEGORIES;
-  if (cleanEndpoint === '/classes/venues') return MOCK_VENUES;
+  if (cleanEndpoint === '/classes') return MOCK_CLASSES;
+
+  // Gym routes
+  if (cleanEndpoint.startsWith('/gyms/') && cleanEndpoint.endsWith('/sans')) {
+    const id = cleanEndpoint.replace('/gyms/', '').split('/')[0];
+    const found = MOCK_GYMS.find(g => g.id === id) || MOCK_GYMS[0];
+    return found?.sans || [];
+  }
+  if (cleanEndpoint.startsWith('/gyms/')) {
+    const id = cleanEndpoint.replace('/gyms/', '').split('/')[0];
+    return MOCK_GYMS.find(g => g.id === id) || MOCK_GYMS[0];
+  }
+  if (cleanEndpoint === '/gyms') return MOCK_GYMS;
+
+  // Plan routes
+  if (cleanEndpoint === '/plans') return MOCK_PLANS;
+
+  // Economics & Admin
   if (cleanEndpoint === '/economics/rules') {
     return {
       globalMaxPayoutPerCreditRatio: 32000,

@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
@@ -77,17 +77,18 @@ export default function GymDetailPage() {
   }, [gymId]);
 
   const getTierImage = (tier?: GymTier) => {
+    const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
     switch (tier) {
       case GymTier.BASIC:
-        return '/images/gym-caro.jpg';
+        return `${basePath}/images/gym-caro.jpg`;
       case GymTier.PLUS:
-        return '/images/gym-vanak.jpg';
+        return `${basePath}/images/gym-vanak.jpg`;
       case GymTier.PREMIUM:
-        return '/images/gym-oxygen.jpg';
+        return `${basePath}/images/gym-oxygen.jpg`;
       case GymTier.ELITE:
-        return '/images/gym-espinas.jpg';
+        return `${basePath}/images/gym-espinas.jpg`;
       default:
-        return '/images/hero-athletic.jpg';
+        return `${basePath}/images/hero-athletic.jpg`;
     }
   };
 
