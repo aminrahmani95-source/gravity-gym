@@ -1,9 +1,16 @@
 import type { NextConfig } from 'next';
 
+const isExport = process.env.NEXT_EXPORT === 'true';
+
 const nextConfig: NextConfig = {
   reactStrictMode: true,
   transpilePackages: ['@gym-app/shared-types'],
+  output: isExport ? 'export' : undefined,
+  basePath: isExport ? '/gravity-gym' : undefined,
+  trailingSlash: true,
+  images: { unoptimized: true },
   async headers() {
+    if (isExport) return [];
     return [
       {
         source: '/:path*',

@@ -1,0 +1,13 @@
+User-Agent: *
+Allow: /
+Allow: /plans
+Allow: /gyms/
+Disallow: /admin
+Disallow: /admin/
+Disallow: /reception
+Disallow: /reception/
+Disallow: /account
+Disallow: /account/
+Disallow: /api/
+
+Sitemap: https://gravity-fitness.ir/sitemap.xml
