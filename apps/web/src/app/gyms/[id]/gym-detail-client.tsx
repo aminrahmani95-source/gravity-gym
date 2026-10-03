@@ -25,13 +25,13 @@ import {
 } from 'lucide-react';
 
 const IRANIAN_DAY_NAMES: Record<number, string> = {
-  0: '╪┤┘╪ذ┘ç',
-  1: '█î┌رظî╪┤┘╪ذ┘ç',
-  2: '╪»┘ê╪┤┘╪ذ┘ç',
-  3: '╪│┘çظî╪┤┘╪ذ┘ç',
-  4: '┌┘ç╪د╪▒╪┤┘╪ذ┘ç',
-  5: '┘╛┘╪شظî╪┤┘╪ذ┘ç',
-  6: '╪ش┘à╪╣┘ç',
+  0: 'شنبه',
+  1: 'یک‌شنبه',
+  2: 'دوشنبه',
+  3: 'سه‌شنبه',
+  4: 'چهارشنبه',
+  5: 'پنج‌شنبه',
+  6: 'جمعه',
 };
 
 export default function GymDetailPage() {
@@ -61,7 +61,7 @@ export default function GymDetailPage() {
         }
       } catch (err: any) {
         if (isMounted) {
-          setError(err?.message || '╪«╪╖╪د ╪»╪▒ ╪ذ╪د╪▒┌»╪░╪د╪▒█î ╪د╪╖┘╪د╪╣╪د╪ز ┘à╪ش┘à┘ê╪╣┘ç ┘ê╪▒╪▓╪┤█î');
+          setError(err?.message || 'خطا در بارگذاری اطلاعات مجموعه ورزشی');
         }
       } finally {
         if (isMounted) {
@@ -110,15 +110,15 @@ export default function GymDetailPage() {
   const getTierTitleFa = (tier?: GymTier) => {
     switch (tier) {
       case GymTier.BASIC:
-        return '╪ذ█î╪│█î┌ر (Basic)';
+        return 'بیسیک (Basic)';
       case GymTier.PLUS:
-        return '┘╛┘╪د╪│ (Plus)';
+        return 'پلاس (Plus)';
       case GymTier.PREMIUM:
-        return '┘╛╪▒█î┘à█î┘ê┘à (Premium)';
+        return 'پریمیوم (Premium)';
       case GymTier.ELITE:
-        return '╪د┘█î╪ز (Elite)';
+        return 'الیت (Elite)';
       default:
-        return '┘╪د┘à╪┤╪«╪╡';
+        return 'نامشخص';
     }
   };
 
@@ -127,20 +127,20 @@ export default function GymDetailPage() {
       case GymAccessMode.FEMALE_ONLY:
         return (
           <span className="rounded-xl bg-rose-950/60 border border-rose-800/60 px-2.5 py-1 text-xs font-bold text-rose-400">
-            ┘ê█î┌ء┘ç ╪ذ╪د┘┘ê╪د┘
+            ویژه بانوان
           </span>
         );
       case GymAccessMode.MALE_ONLY:
         return (
           <span className="rounded-xl bg-cyan-950/60 border border-cyan-800/60 px-2.5 py-1 text-xs font-bold text-cyan-400">
-            ┘ê█î┌ء┘ç ╪ت┘é╪د█î╪د┘
+            ویژه آقایان
           </span>
         );
       case GymAccessMode.MIXED:
       default:
         return (
           <span className="rounded-xl bg-[#1D2125] border border-[#272B30] px-2.5 py-1 text-xs font-medium text-[#C4C8CC]">
-            ╪│╪د┘╪│ظî┘ç╪د█î ╪ز┘┌ر█î┌رظî╪┤╪»┘ç
+            سانس‌های تفکیک‌شده
           </span>
         );
     }
@@ -149,7 +149,7 @@ export default function GymDetailPage() {
   const handleOpenQr = () => {
     const hasToken = typeof window !== 'undefined' ? localStorage.getItem('gym_app_token') : null;
     if (!user && !hasToken) {
-      openLoginModal('╪ش┘ç╪ز ╪»╪▒█î╪د┘╪ز ╪ذ╪د╪▒┌ر╪» ┘ê╪▒┘ê╪» ┘ê ┘à╪╡╪▒┘ ╪د╪╣╪ز╪ذ╪د╪▒╪î ╪د╪ذ╪ز╪»╪د ┘ê╪د╪▒╪» ╪ص╪│╪د╪ذ ┌ر╪د╪▒╪ذ╪▒█î ╪«┘ê╪» ╪┤┘ê█î╪».');
+      openLoginModal('جهت دریافت بارکد ورود و مصرف اعتبار، ابتدا وارد حساب کاربری خود شوید.');
       return;
     }
     setIsQrOpen(true);
@@ -179,7 +179,7 @@ export default function GymDetailPage() {
               className="inline-flex items-center gap-2 text-xs font-bold text-[#9CA3A8] hover:text-[#C8F500] transition-colors"
             >
               <ArrowRight className="h-4 w-4" />
-              <span>╪ذ╪د╪▓┌»╪┤╪ز ╪ذ┘ç ┌ر╪د┘ê╪┤ ╪ذ╪د╪┤┌»╪د┘çظî┘ç╪د</span>
+              <span>بازگشت به کاوش باشگاه‌ها</span>
             </Link>
           </div>
 
@@ -194,9 +194,9 @@ export default function GymDetailPage() {
           ) : error || !gym ? (
             <div className="rounded-3xl border border-red-800/80 bg-red-950/60 p-8 text-center space-y-4">
               <AlertCircle className="h-10 w-10 text-red-400 mx-auto" />
-              <h2 className="text-lg font-bold text-red-200">{error || '┘à╪ش┘à┘ê╪╣┘ç ┘ê╪▒╪▓╪┤█î █î╪د┘╪ز ┘╪┤╪».'}</h2>
+              <h2 className="text-lg font-bold text-red-200">{error || 'مجموعه ورزشی یافت نشد.'}</h2>
               <Button onClick={() => router.push('/')} variant="outline" size="sm">
-                ┘à╪┤╪د┘ç╪»┘ç ┘ç┘à┘ç ┘à╪ش┘à┘ê╪╣┘çظî┘ç╪د
+                مشاهده همه مجموعه‌ها
               </Button>
             </div>
           ) : (
@@ -220,7 +220,7 @@ export default function GymDetailPage() {
                       {getAccessModeBadge(gym.accessMode)}
                     </div>
                     <span className="text-[11px] text-[#9CA3A8] bg-black/60 backdrop-blur-xs px-2.5 py-1 rounded-lg border border-white/10">
-                      ╪ز╪╡┘ê█î╪▒ ┘┘à╪د╪»█î┘ ┘à╪ص█î╪╖█î
+                      تصویر نمادین محیطی
                     </span>
                   </div>
 
@@ -232,7 +232,7 @@ export default function GymDetailPage() {
                       </h1>
                       <div className="flex items-center gap-2 text-xs sm:text-sm text-[#C4C8CC]">
                         <MapPin className="h-4 w-4 text-[#C8F500] shrink-0" />
-                        <span>{gym.city}╪î {gym.district} ظ¤ {gym.addressFa}</span>
+                        <span>{gym.city}، {gym.district} — {gym.addressFa}</span>
                       </div>
                     </div>
 
@@ -242,7 +242,7 @@ export default function GymDetailPage() {
                         <span className="block text-xl font-black font-persian-digits text-[#C8F500]">
                           {toPersianDigits(gym.currentCreditCost)}
                         </span>
-                        <span className="text-[11px] text-[#9CA3A8] font-normal">╪د╪╣╪ز╪ذ╪د╪▒ ┘ç╪▒ ╪ش┘╪│┘ç</span>
+                        <span className="text-[11px] text-[#9CA3A8] font-normal">اعتبار هر جلسه</span>
                       </div>
                       <Button
                         onClick={handleOpenQr}
@@ -250,7 +250,7 @@ export default function GymDetailPage() {
                         size="md"
                         leftIcon={<QrCode className="h-5 w-5 text-[#0D0F11]" />}
                       >
-                        ╪»╪▒█î╪د┘╪ز ╪ذ╪د╪▒┌ر╪» ┘ê╪▒┘ê╪»
+                        دریافت بارکد ورود
                       </Button>
                     </div>
                   </div>
@@ -267,7 +267,7 @@ export default function GymDetailPage() {
                     <div>
                       <div className="flex items-center gap-2">
                         <span className="inline-block h-2 w-2 rounded-full bg-[#C8F500] animate-pulse" />
-                        <span className="text-xs font-bold text-[#C8F500]">┘à╪ش┘à┘ê╪╣┘ç ┘ç┘àظî╪د┌ر┘┘ê┘ ╪ذ╪د╪▓ ╪د╪│╪ز</span>
+                        <span className="text-xs font-bold text-[#C8F500]">مجموعه هم‌اکنون باز است</span>
                       </div>
                       <h3 className="text-sm font-bold text-[#F4F5F2] mt-0.5">
                         {toPersianDigits(gym.activeSession.labelFa)}
@@ -276,16 +276,16 @@ export default function GymDetailPage() {
                   </div>
 
                   <div className="text-xs text-[#C8F500] bg-[#1D2125] border border-[#272B30] rounded-xl px-3 py-1.5 font-medium">
-                    ╪│╪د╪╣╪ز ┌ر╪د╪▒█î ┘╪╣┘█î: {toPersianDigits(gym.activeSession.startTime)} ╪د┘█î {toPersianDigits(gym.activeSession.endTime)}
+                    ساعت کاری فعلی: {toPersianDigits(gym.activeSession.startTime)} الی {toPersianDigits(gym.activeSession.endTime)}
                   </div>
                 </div>
               ) : (
                 <div className="rounded-3xl border border-[#272B30] bg-[#15181B] p-4 sm:p-5 flex items-center gap-3 text-[#9CA3A8]">
                   <Clock className="h-5 w-5 text-[#62686D] shrink-0" />
                   <div>
-                    <span className="text-xs font-bold text-[#F4F5F2]">╪»╪▒ ╪د█î┘ ┘╪ص╪╕┘ç ╪│╪د┘╪│█î ┘╪╣╪د┘ ┘┘à█îظî╪ذ╪د╪┤╪».</span>
+                    <span className="text-xs font-bold text-[#F4F5F2]">در این لحظه سانسی فعال نمی‌باشد.</span>
                     <p className="text-xs text-[#9CA3A8] mt-0.5">
-                      ╪ذ╪▒╪د█î ┘à╪▒╪د╪ش╪╣┘ç╪î ╪ذ╪▒┘╪د┘à┘ç ╪▓┘à╪د┘ظî╪ذ┘╪»█î ┘ç┘╪ز┌»█î ╪│╪د┘╪│ظî┘ç╪د█î ╪▓█î╪▒ ╪▒╪د ╪ذ╪▒╪▒╪│█î ┘╪▒┘à╪د█î█î╪».
+                      برای مراجعه، برنامه زمان‌بندی هفتگی سانس‌های زیر را بررسی فرمایید.
                     </p>
                   </div>
                 </div>
@@ -301,11 +301,11 @@ export default function GymDetailPage() {
                       <div className="flex items-center gap-2">
                         <Calendar className="h-5 w-5 text-[#C8F500]" />
                         <h2 className="text-base font-bold text-[#F4F5F2]">
-                          ╪ذ╪▒┘╪د┘à┘ç ╪▓┘à╪د┘ظî╪ذ┘╪»█î ┘ê ╪│╪د┘╪│ظî┘ç╪د█î ┘ç┘╪ز┌»█î
+                          برنامه زمان‌بندی و سانس‌های هفتگی
                         </h2>
                       </div>
                       <span className="text-xs text-[#9CA3A8]">
-                        ╪│╪د╪╣╪ز ╪▒╪│┘à█î ╪ز┘ç╪▒╪د┘
+                        ساعت رسمی تهران
                       </span>
                     </div>
 
@@ -322,7 +322,7 @@ export default function GymDetailPage() {
                             </span>
 
                             {sansList.length === 0 ? (
-                              <span className="text-xs text-[#62686D]">╪ز╪╣╪╖█î┘ / ╪ذ╪»┘ê┘ ╪│╪د┘╪│</span>
+                              <span className="text-xs text-[#62686D]">تعطیل / بدون سانس</span>
                             ) : (
                               <div className="flex flex-wrap items-center gap-2 flex-1 sm:justify-end">
                                 {sansList.map(s => {
@@ -337,14 +337,14 @@ export default function GymDetailPage() {
                                       }`}
                                     >
                                       <span className="font-bold">
-                                        {isFemale ? '╪ذ╪د┘┘ê╪د┘' : '╪ت┘é╪د█î╪د┘'}:
+                                        {isFemale ? 'بانوان' : 'آقایان'}:
                                       </span>
                                       <span className="font-persian-digits">
-                                        {toPersianDigits(s.startTime.slice(0, 5))} ╪ز╪د {toPersianDigits(s.endTime.slice(0, 5))}
+                                        {toPersianDigits(s.startTime.slice(0, 5))} تا {toPersianDigits(s.endTime.slice(0, 5))}
                                       </span>
                                       {s.isPeak && (
                                         <span className="rounded bg-amber-950/70 border border-amber-800/70 px-1 text-[10px] text-amber-300 font-normal">
-                                          ┘╛█î┌ر
+                                          پیک
                                         </span>
                                       )}
                                     </div>
@@ -364,7 +364,7 @@ export default function GymDetailPage() {
                       <div className="flex items-center gap-2 border-b border-[#202428] pb-4">
                         <Dumbbell className="h-5 w-5 text-[#C8F500]" />
                         <h2 className="text-base font-bold text-[#F4F5F2]">
-                          ╪د┘à┌ر╪د┘╪د╪ز ┘ê ╪ز╪ش┘ç█î╪▓╪د╪ز ╪س╪ذ╪زظî╪┤╪»┘ç ┘à╪ش┘à┘ê╪╣┘ç
+                          امکانات و تجهیزات ثبت‌شده مجموعه
                         </h2>
                       </div>
 
@@ -389,27 +389,27 @@ export default function GymDetailPage() {
                   <div className="rounded-3xl border border-[#272B30] bg-[#15181B] p-6 shadow-xs space-y-4">
                     <h3 className="text-sm font-bold text-[#F4F5F2] border-b border-[#202428] pb-3 flex items-center gap-2">
                       <MapPin className="h-4 w-4 text-[#C8F500]" />
-                      <span>┘à┘ê┘é╪╣█î╪ز ┘ê ╪ت╪»╪▒╪│ ┘à╪ش┘à┘ê╪╣┘ç</span>
+                      <span>موقعیت و آدرس مجموعه</span>
                     </h3>
 
                     <div className="space-y-3 text-xs leading-relaxed text-[#9CA3A8]">
                       <div>
-                        <span className="font-bold text-[#F4F5F2]">┘╪┤╪د┘█î ╪»┘é█î┘é:</span>
+                        <span className="font-bold text-[#F4F5F2]">نشانی دقیق:</span>
                         <p className="mt-1">{gym.addressFa}</p>
                       </div>
 
                       {gym.phone && (
                         <div className="flex items-center gap-2 pt-2 border-t border-[#202428]">
                           <Phone className="h-3.5 w-3.5 text-[#9CA3A8]" />
-                          <span className="font-bold text-[#F4F5F2]">╪ز┘┘┘:</span>
+                          <span className="font-bold text-[#F4F5F2]">تلفن:</span>
                           <span className="font-persian-digits text-[#C4C8CC]">{toPersianDigits(gym.phone)}</span>
                         </div>
                       )}
 
                       <div className="pt-2 border-t border-[#202428]">
-                        <span className="font-bold text-[#F4F5F2]">╪┤╪╣╪د╪╣ ┘à┘ê┘é╪╣█î╪ز ┘à┌ر╪د┘█î ┌┌رظî╪د█î┘:</span>
+                        <span className="font-bold text-[#F4F5F2]">شعاع موقعیت مکانی چک‌این:</span>
                         <span className="mr-1.5 font-persian-digits text-[#C4C8CC]">
-                          {toPersianDigits(gym.geofenceRadiusMeters || 150)} ┘à╪ز╪▒
+                          {toPersianDigits(gym.geofenceRadiusMeters || 150)} متر
                         </span>
                       </div>
                     </div>
@@ -419,14 +419,14 @@ export default function GymDetailPage() {
                   <div className="rounded-3xl border border-[#272B30] bg-[#15181B] p-6 shadow-xs space-y-4">
                     <h3 className="text-sm font-bold text-[#F4F5F2] border-b border-[#202428] pb-3 flex items-center gap-2">
                       <ShieldCheck className="h-4 w-4 text-emerald-400" />
-                      <span>┘é┘ê╪د┘█î┘ ┘╛╪░█î╪▒╪┤ ┘ê ┌┌رظî╪د█î┘</span>
+                      <span>قوانین پذیرش و چک‌این</span>
                     </h3>
 
                     <ul className="space-y-2.5 text-xs text-[#9CA3A8] leading-relaxed list-disc list-inside">
-                      <li>┘ê╪▒┘ê╪» ╪ذ┘ç ╪ذ╪د╪┤┌»╪د┘ç ╪╡╪▒┘╪د┘ï ╪»╪▒ ╪│╪د┘╪│ظî┘ç╪د█î ┘à╪ش╪د╪▓ ┘ê ┘à╪╖╪د╪ذ┘é ╪ذ╪د ╪ش┘╪│█î╪ز ╪ص╪│╪د╪ذ ┌ر╪د╪▒╪ذ╪▒█î ╪د┘à┌ر╪د┘ظî┘╛╪░█î╪▒ ╪د╪│╪ز.</li>
-                      <li>╪ذ╪د╪▒┌ر╪» ┘╛┘ê█î╪د (Dynamic QR) ┘ç╪▒ █┤█╡ ╪س╪د┘█î┘ç █î┌رظî╪ذ╪د╪▒ ┘┘ê╪│╪د╪▓█î ╪┤╪»┘ç ┘ê ┘┘é╪╖ █î┌رظî╪ذ╪د╪▒ ┘à╪╡╪▒┘ ╪د╪│╪ز.</li>
-                      <li>┘╛╪│ ╪د╪▓ ╪ز╪ث█î█î╪» ╪ذ╪د╪▒┌ر╪» ╪»╪▒ ┌»█î╪ز ┘╛╪░█î╪▒╪┤╪î {toPersianDigits(gym.currentCreditCost)} ╪د╪╣╪ز╪ذ╪د╪▒ ╪د╪▓ ┌ر█î┘ ┘╛┘ê┘ ╪┤┘à╪د ┌ر╪│╪▒ ┘à█îظî┌»╪▒╪»╪».</li>
-                      <li>┘╪د╪╡┘┘ç ╪▓┘à╪د┘█î ╪د┘╪▓╪د┘à█î ╪ذ█î┘ ╪»┘ê ┌┌رظî╪د█î┘ ┘à╪ز┘ê╪د┘█î █╢█░ ╪»┘é█î┘é┘ç ╪د╪│╪ز.</li>
+                      <li>ورود به باشگاه صرفاً در سانس‌های مجاز و مطابق با جنسیت حساب کاربری امکان‌پذیر است.</li>
+                      <li>بارکد پویا (Dynamic QR) هر ۴۵ ثانیه یک‌بار نوسازی شده و فقط یک‌بار مصرف است.</li>
+                      <li>پس از تأیید بارکد در گیت پذیرش، {toPersianDigits(gym.currentCreditCost)} اعتبار از کیف پول شما کسر می‌گردد.</li>
+                      <li>فاصله زمانی الزامی بین دو چک‌این متوالی ۶۰ دقیقه است.</li>
                     </ul>
                   </div>
 
@@ -436,8 +436,8 @@ export default function GymDetailPage() {
                       <QrCode className="h-6 w-6" />
                     </div>
                     <div className="space-y-1">
-                      <h4 className="text-sm font-bold text-[#F4F5F2]">╪ت┘à╪د╪»┘ç ┘ê╪▒┘ê╪» ┘ç╪│╪ز█î╪»╪ا</h4>
-                      <p className="text-xs text-[#9CA3A8]">╪ذ╪د╪▒┌ر╪» ╪«┘ê╪» ╪▒╪د ╪▒┘ê█î ╪»╪│╪ز┌»╪د┘ç ╪د╪│┌ر┘╪▒ ┘╛╪░█î╪▒╪┤ ┘é╪▒╪د╪▒ ╪»┘ç█î╪».</p>
+                      <h4 className="text-sm font-bold text-[#F4F5F2]">آماده ورود هستید؟</h4>
+                      <p className="text-xs text-[#9CA3A8]">بارکد خود را روی دستگاه اسکنر پذیرش قرار دهید.</p>
                     </div>
                     <Button
                       onClick={handleOpenQr}
@@ -446,7 +446,7 @@ export default function GymDetailPage() {
                       className="w-full"
                       leftIcon={<QrCode className="h-4 w-4 text-[#0D0F11]" />}
                     >
-                      ╪»╪▒█î╪د┘╪ز ╪ذ╪د╪▒┌ر╪» ┘ê╪▒┘ê╪»█î
+                      دریافت بارکد ورودی
                     </Button>
                   </div>
                 </div>
