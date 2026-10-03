@@ -1,0 +1,124 @@
+version: '3.8'
+
+services:
+  # ---------------------------------------------------------------------------
+  # 1. PostgreSQL 18 Database (Native Schema & Seed Initialization)
+  # ---------------------------------------------------------------------------
+  postgres:
+    image: postgres:17-alpine
+    container_name: gym_app_postgres
+    restart: always
+    environment:
+      POSTGRES_USER: ${DB_USER:-postgres}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-postgres_secure_pass}
+      POSTGRES_DB: ${DB_NAME:-gym_platform_db}
+    ports:
+      - "${DB_PORT:-5432}:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./infra/init-db:/docker-entrypoint-initdb.d
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER:-postgres} -d ${DB_NAME:-gym_platform_db}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - gym_network
+
+  # ---------------------------------------------------------------------------
+  # 2. Redis 7 In-Memory Cache, Anti-Replay & Distributed Mutex
+  # ---------------------------------------------------------------------------
+  redis:
+    image: redis:7-alpine
+    container_name: gym_app_redis
+    restart: always
+    ports:
+      - "${REDIS_PORT:-6379}:6379"
+    volumes:
+      - redis_data:/data
+    command: redis-server --appendonly yes --save 60 1
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - gym_network
+
+  # ---------------------------------------------------------------------------
+  # 3. NestJS API Backend (Decoupled Credit Economy & Check-in Verification)
+  # ---------------------------------------------------------------------------
+  api:
+    build:
+      context: .
+      dockerfile: apps/api/Dockerfile
+    container_name: gym_app_api
+    restart: always
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    environment:
+      NODE_ENV: production
+      PORT: 4000
+      DATABASE_URL: postgresql://${DB_USER:-postgres}:${DB_PASSWORD:-postgres_secure_pass}@postgres:5432/${DB_NAME:-gym_platform_db}
+      REDIS_URL: redis://redis:6379
+      JWT_SECRET: ${JWT_SECRET}
+      QR_SIGNING_SECRET: ${QR_SIGNING_SECRET}
+      JWT_EXPIRATION_HOURS: ${JWT_EXPIRATION_HOURS:-72}
+      QR_TTL_SECONDS: ${QR_TTL_SECONDS:-45}
+      WEB_ORIGIN: ${WEB_ORIGIN:-http://localhost:3000}
+      SMS_PROVIDER: ${SMS_PROVIDER:-mock}
+      PAYMENT_GATEWAY_PROVIDER: ${PAYMENT_GATEWAY_PROVIDER:-mock}
+    ports:
+      - "${PORT:-4000}:4000"
+    healthcheck:
+      test: ["CMD", "node", "-e", "require('http').get('http://localhost:4000/api/v1/health', (r) => process.exit(r.statusCode === 200 ? 0 : 1)).on('error', () => process.exit(1))"]
+      interval: 15s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+    networks:
+      - gym_network
+
+  # ---------------------------------------------------------------------------
+  # 4. Next.js 16 Persian RTL Frontend Client
+  # ---------------------------------------------------------------------------
+  web:
+    build:
+      context: .
+      dockerfile: apps/web/Dockerfile
+      args:
+        NEXT_PUBLIC_API_URL: ${NEXT_PUBLIC_API_URL:-http://localhost:4000/api/v1}
+        NEXT_PUBLIC_ENABLE_DEMO_LOGIN: "false"
+    container_name: gym_app_web
+    restart: always
+    depends_on:
+      api:
+        condition: service_healthy
+    environment:
+      NODE_ENV: production
+      PORT: 3000
+      NEXT_PUBLIC_API_URL: ${NEXT_PUBLIC_API_URL:-http://localhost:4000/api/v1}
+      NEXT_PUBLIC_ENABLE_DEMO_LOGIN: "false"
+    ports:
+      - "${WEB_PORT:-3000}:3000"
+    healthcheck:
+      test: ["CMD", "node", "-e", "require('http').get('http://localhost:3000', (r) => process.exit(r.statusCode === 200 ? 0 : 1)).on('error', () => process.exit(1))"]
+      interval: 15s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+    networks:
+      - gym_network
+
+volumes:
+  postgres_data:
+    driver: local
+  redis_data:
+    driver: local
+
+networks:
+  gym_network:
+    driver: bridge

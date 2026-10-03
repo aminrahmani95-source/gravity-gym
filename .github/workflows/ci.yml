@@ -1,0 +1,132 @@
+name: Gravity Platform CI & Reliability Gate
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build-and-test:
+    name: Build, Typecheck & Quality Gates
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    services:
+      postgres:
+        image: postgres:17-alpine
+        env:
+          POSTGRES_DB: gym_platform_test_db
+          POSTGRES_USER: test_user
+          POSTGRES_PASSWORD: test_password
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U test_user -d gym_platform_test_db"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
+      redis:
+        image: redis:7-alpine
+        ports:
+          - 6379:6379
+        options: >-
+          --health-cmd "redis-cli ping"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
+    env:
+      NODE_ENV: test
+      TZ: Asia/Tehran
+      DATABASE_URL: postgresql://test_user:test_password@localhost:5432/gym_platform_test_db
+      TEST_DATABASE_URL: postgresql://test_user:test_password@localhost:5432/gym_platform_test_db
+      REDIS_URL: redis://localhost:6379
+      TEST_REDIS_URL: redis://localhost:6379
+      JWT_SECRET: super_secure_ci_test_jwt_secret_minimum_32_characters_long
+      QR_SIGNING_SECRET: super_secure_ci_test_qr_secret_minimum_32_characters_long
+      WEB_ORIGIN: http://localhost:3000
+      PORT: 4000
+      WEB_PORT: 3000
+      NEXT_PUBLIC_API_URL: http://localhost:4000/api/v1
+      NEXT_PUBLIC_ENABLE_DEMO_LOGIN: "false"
+
+    steps:
+      - name: Checkout Code Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js 22 LTS
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: 'npm'
+
+      - name: Install Monorepo Dependencies
+        run: npm ci
+
+      - name: Initialize PostgreSQL Test Database Schema & Seeds
+        run: |
+          echo "Applying 01-init.sql..."
+          PGPASSWORD=test_password psql -h localhost -p 5432 -U test_user -d gym_platform_test_db -f infra/init-db/01-init.sql
+          echo "Applying 02-seed.sql..."
+          PGPASSWORD=test_password psql -h localhost -p 5432 -U test_user -d gym_platform_test_db -f infra/init-db/02-seed.sql
+          echo "Verifying database tables count..."
+          PGPASSWORD=test_password psql -h localhost -p 5432 -U test_user -d gym_platform_test_db -c "SELECT count(*) FROM information_schema.tables WHERE table_schema = 'public';"
+
+      - name: Compile Canonical Shared Types
+        run: npm run --workspace=@gym-app/shared-types build
+
+      - name: Run Full Workspace TypeScript Typecheck
+        run: npm run typecheck
+
+      - name: Execute Full Unit Test Suites (144 Tests)
+        run: npm test
+
+      - name: Execute Real Infrastructure Integration Tests (PostgreSQL 18 & Redis 8)
+        run: npm run test:integration
+
+      - name: Compile Production NestJS API Server
+        run: npm run --workspace=@gym-app/api build
+
+      - name: Compile Production Next.js 16 Web Application
+        run: npm run --workspace=@gym-app/web build
+
+      - name: Run Background Services & Execute End-to-End Validation Journeys
+        run: |
+          echo "Starting NestJS API server in background..."
+          node apps/api/dist/src/main.js &
+          API_PID=$!
+          echo "Waiting for API readiness probe at http://localhost:4000/api/v1/health/ready..."
+          for i in {1..30}; do
+            if curl -s -f http://localhost:4000/api/v1/health/ready > /dev/null; then
+              echo "API server is healthy and ready!"
+              break
+            fi
+            sleep 1
+          done
+
+          echo "Starting Next.js Web server in background..."
+          PORT=3000 npm run --workspace=@gym-app/web start &
+          WEB_PID=$!
+          echo "Waiting for Web readiness probe at http://localhost:3000..."
+          for i in {1..30}; do
+            if curl -s -f http://localhost:3000 > /dev/null; then
+              echo "Web server is online!"
+              break
+            fi
+            sleep 1
+          done
+
+          echo "Executing E2E API & Sans-Aware Validation Journey..."
+          node apps/api/test/validate-e2e.mjs
+
+          echo "Executing Adversarial Security & Negative Audit Suite..."
+          node apps/api/test/audit-negative-tests.mjs
+
+          echo "Cleaning up background server processes..."
+          kill -9 $API_PID $WEB_PID || true

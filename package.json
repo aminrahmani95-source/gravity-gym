@@ -1,0 +1,37 @@
+{
+  "name": "iranian-fitness-platform",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Iranian Multi-Gym Credit Membership Platform",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "build": "npm run --workspaces --if-present build",
+    "test": "npm run --workspaces --if-present test",
+    "test:integration": "npm run --workspace=@gym-app/api test:integration",
+    "lint": "npm run --workspaces --if-present lint",
+    "typecheck": "npm run --workspaces --if-present typecheck",
+    "repomix": "npx repomix",
+    "repomix:md": "npx repomix --style markdown -o repomix-output.md"
+  },
+  "keywords": [
+    "fitness",
+    "iran",
+    "membership",
+    "credit-economy",
+    "classpass",
+    "rtl",
+    "persian"
+  ],
+  "author": "Antigravity Engineering",
+  "license": "UNLICENSED",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "devDependencies": {
+    "embedded-postgres": "^18.4.0-beta.17",
+    "puppeteer-core": "^25.12.0"
+  }
+}

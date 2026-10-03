@@ -1,0 +1,32 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Builds & Caches
+.next/
+dist/
+build/
+*.tsbuildinfo
+*.log
+
+# Database & local data
+apps/api/data/
+*.sqlite
+*.db
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Tool outputs & temp artifacts
+repomix-output.*
+graphify-out/
+account_visual_qa/
+visual_final_qa/
+mobile_qa/
+rbac_qa/
+visual_audit/
+.embedded_postgres_data/
+.temp_pg_data/
+.agents/

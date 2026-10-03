@@ -1,0 +1,2188 @@
+{
+  "timestamp": "2026-10-01T18:44:16.873Z",
+  "sourceDatabase": "gym_platform_db",
+  "tables": {
+    "audit_logs": [],
+    "checkins": [
+      {
+        "id": "37252dd7-7b2d-4957-a293-d99e7d2f6a53",
+        "user_id": "00000000-0000-0000-0000-000000000003",
+        "gym_id": "10000000-0000-0000-0000-000000000004",
+        "staff_user_id": null,
+        "credits_debited": 14,
+        "monetary_payout_tomans": "230000",
+        "status": "COMPLETED",
+        "rejection_reason": null,
+        "client_lat": null,
+        "client_lng": null,
+        "qr_nonce": null,
+        "created_at": "2026-10-01T18:40:16.136Z"
+      },
+      {
+        "id": "3b794cf9-8256-4460-92c7-abf86589659e",
+        "user_id": "00000000-0000-0000-0000-000000000003",
+        "gym_id": "10000000-0000-0000-0000-000000000002",
+        "staff_user_id": "00000000-0000-0000-0000-000000000002",
+        "credits_debited": 4,
+        "monetary_payout_tomans": "65000",
+        "status": "COMPLETED",
+        "rejection_reason": null,
+        "client_lat": null,
+        "client_lng": null,
+        "qr_nonce": "PG18_NONCE_6c8511ba-94ac-4609-bbfc-e417a45e7226",
+        "created_at": "2026-10-01T18:40:16.554Z"
+      },
+      {
+        "id": "02a8b117-13d5-437b-a024-8d0e5059219f",
+        "user_id": "00000000-0000-0000-0000-000000000003",
+        "gym_id": "10000000-0000-0000-0000-000000000002",
+        "staff_user_id": "00000000-0000-0000-0000-000000000002",
+        "credits_debited": 4,
+        "monetary_payout_tomans": "65000",
+        "status": "COMPLETED",
+        "rejection_reason": null,
+        "client_lat": null,
+        "client_lng": null,
+        "qr_nonce": "PG18_DUPLICATE_NONCE_ea55ce78-fd73-4fc2-9f8c-b001ab12920a",
+        "created_at": "2026-10-01T18:40:16.560Z"
+      },
+      {
+        "id": "d9a1e22c-70a4-4cb6-af13-571d58ca26cd",
+        "user_id": "00000000-0000-0000-0000-000000000003",
+        "gym_id": "10000000-0000-0000-0000-000000000002",
+        "staff_user_id": "00000000-0000-0000-0000-000000000002",
+        "credits_debited": 4,
+        "monetary_payout_tomans": "65000",
+        "status": "COMPLETED",
+        "rejection_reason": null,
+        "client_lat": null,
+        "client_lng": null,
+        "qr_nonce": "PG18_CONCURRENT_NONCE_30c1ecf5-4221-4f3e-9936-9ea4b28c63db",
+        "created_at": "2026-10-01T18:40:16.561Z"
+      },
+      {
+        "id": "71323bc8-9422-4e84-b137-5b41b239a5e2",
+        "user_id": "00000000-0000-0000-0000-000000000003",
+        "gym_id": "10000000-0000-0000-0000-000000000002",
+        "staff_user_id": "00000000-0000-0000-0000-000000000002",
+        "credits_debited": 4,
+        "monetary_payout_tomans": "65000",
+        "status": "COMPLETED",
+        "rejection_reason": null,
+        "client_lat": null,
+        "client_lng": null,
+        "qr_nonce": "FK_PARENT_NONCE_343cc1cf-c43b-4bd3-9c73-4956743f33af",
+        "created_at": "2026-10-01T18:40:16.574Z"
+      },
+      {
+        "id": "886d8536-05aa-4ccc-9f50-637f14517302",
+        "user_id": "00000000-0000-0000-0000-000000000003",
+        "gym_id": "10000000-0000-0000-0000-000000000004",
+        "staff_user_id": null,
+        "credits_debited": 14,
+        "monetary_payout_tomans": "230000",
+        "status": "COMPLETED",
+        "rejection_reason": null,
+        "client_lat": null,
+        "client_lng": null,
+        "qr_nonce": null,
+        "created_at": "2026-10-01T18:41:49.186Z"
+      },
+      {
+        "id": "a25cb0dc-c916-4fcc-90a2-b65cf9c790f2",
+        "user_id": "00000000-0000-0000-0000-000000000003",
+        "gym_id": "10000000-0000-0000-0000-000000000002",
+        "staff_user_id": "00000000-0000-0000-0000-000000000002",
+        "credits_debited": 4,
+        "monetary_payout_tomans": "65000",
+        "status": "COMPLETED",
+        "rejection_reason": null,
+        "client_lat": null,
+        "client_lng": null,
+        "qr_nonce": "PG18_NONCE_3bcfb920-1621-4180-8918-37a413bf2704",
+        "created_at": "2026-10-01T18:41:49.397Z"
+      },
+      {
+        "id": "cfb48317-c795-46f8-a468-ab4e60d35104",
+        "user_id": "00000000-0000-0000-0000-000000000003",
+        "gym_id": "10000000-0000-0000-0000-000000000002",
+        "staff_user_id": "00000000-0000-0000-0000-000000000002",
+        "credits_debited": 4,
+        "monetary_payout_tomans": "65000",
+        "status": "COMPLETED",
+        "rejection_reason": null,
+        "client_lat": null,
+        "client_lng": null,
+        "qr_nonce": "PG18_DUPLICATE_NONCE_04686397-137f-440f-96c5-f5c52f37b8d2",
+        "created_at": "2026-10-01T18:41:49.404Z"
+      },
+      {
+        "id": "47137f33-d9c3-4170-a548-f93254a44555",
+        "user_id": "00000000-0000-0000-0000-000000000003",
+        "gym_id": "10000000-0000-0000-0000-000000000002",
+        "staff_user_id": "00000000-0000-0000-0000-000000000002",
+        "credits_debited": 4,
+        "monetary_payout_tomans": "65000",
+        "status": "COMPLETED",
+        "rejection_reason": null,
+        "client_lat": null,
+        "client_lng": null,
+        "qr_nonce": "PG18_CONCURRENT_NONCE_34e7fdb0-2cfb-46da-a7b5-0880434c92b8",
+        "created_at": "2026-10-01T18:41:49.406Z"
+      },
+      {
+        "id": "b5973256-d8d0-47a4-b66a-0a39d93c86e6",
+        "user_id": "00000000-0000-0000-0000-000000000003",
+        "gym_id": "10000000-0000-0000-0000-000000000002",
+        "staff_user_id": "00000000-0000-0000-0000-000000000002",
+        "credits_debited": 4,
+        "monetary_payout_tomans": "65000",
+        "status": "COMPLETED",
+        "rejection_reason": null,
+        "client_lat": null,
+        "client_lng": null,
+        "qr_nonce": "FK_PARENT_NONCE_1d18cbed-fe23-4009-b95d-30a1eb5bd2cd",
+        "created_at": "2026-10-01T18:41:49.416Z"
+      },
+      {
+        "id": "c114d9b6-1a1a-4c76-b5d4-4596aea72857",
+        "user_id": "00000000-0000-0000-0000-000000000003",
+        "gym_id": "10000000-0000-0000-0000-000000000004",
+        "staff_user_id": null,
+        "credits_debited": 14,
+        "monetary_payout_tomans": "230000",
+        "status": "COMPLETED",
+        "rejection_reason": null,
+        "client_lat": null,
+        "client_lng": null,
+        "qr_nonce": null,
+        "created_at": "2026-10-01T18:43:19.840Z"
+      },
+      {
+        "id": "7f5536e9-e92f-4916-9b42-2e3e02ee7ee3",
+        "user_id": "00000000-0000-0000-0000-000000000003",
+        "gym_id": "10000000-0000-0000-0000-000000000002",
+        "staff_user_id": "00000000-0000-0000-0000-000000000002",
+        "credits_debited": 4,
+        "monetary_payout_tomans": "65000",
+        "status": "COMPLETED",
+        "rejection_reason": null,
+        "client_lat": null,
+        "client_lng": null,
+        "qr_nonce": "PG18_NONCE_e50105fb-3a35-467c-b6ac-6f2455151f45",
+        "created_at": "2026-10-01T18:43:20.064Z"
+      },
+      {
+        "id": "02736587-fca7-4dfa-add7-c31adb6e4a24",
+        "user_id": "00000000-0000-0000-0000-000000000003",
+        "gym_id": "10000000-0000-0000-0000-000000000002",
+        "staff_user_id": "00000000-0000-0000-0000-000000000002",
+        "credits_debited": 4,
+        "monetary_payout_tomans": "65000",
+        "status": "COMPLETED",
+        "rejection_reason": null,
+        "client_lat": null,
+        "client_lng": null,
+        "qr_nonce": "PG18_DUPLICATE_NONCE_f4495d27-4527-45bc-aa7a-5519797c3289",
+        "created_at": "2026-10-01T18:43:20.069Z"
+      },
+      {
+        "id": "1c205b66-ee63-4d8a-a2fa-b15b1adaecb1",
+        "user_id": "00000000-0000-0000-0000-000000000003",
+        "gym_id": "10000000-0000-0000-0000-000000000002",
+        "staff_user_id": "00000000-0000-0000-0000-000000000002",
+        "credits_debited": 4,
+        "monetary_payout_tomans": "65000",
+        "status": "COMPLETED",
+        "rejection_reason": null,
+        "client_lat": null,
+        "client_lng": null,
+        "qr_nonce": "PG18_CONCURRENT_NONCE_9b8d1bd2-5351-4dad-8f05-50ba272b3bd2",
+        "created_at": "2026-10-01T18:43:20.070Z"
+      },
+      {
+        "id": "cfbcdbe8-9a02-4a64-a1b8-15f50f909a2b",
+        "user_id": "00000000-0000-0000-0000-000000000003",
+        "gym_id": "10000000-0000-0000-0000-000000000002",
+        "staff_user_id": "00000000-0000-0000-0000-000000000002",
+        "credits_debited": 4,
+        "monetary_payout_tomans": "65000",
+        "status": "COMPLETED",
+        "rejection_reason": null,
+        "client_lat": null,
+        "client_lng": null,
+        "qr_nonce": "FK_PARENT_NONCE_95d01dd8-bfc1-499b-b196-ce62868a059e",
+        "created_at": "2026-10-01T18:43:20.082Z"
+      }
+    ],
+    "class_bookings": [],
+    "class_categories": [],
+    "class_sessions": [],
+    "class_venues": [],
+    "coach_classes": [],
+    "coach_monthly_plans": [],
+    "coach_payable_ledger": [],
+    "coach_plan_enrollments": [],
+    "coach_plan_usage_ledger": [],
+    "coach_settlement_batches": [],
+    "coaches": [],
+    "credit_ledger": [
+      {
+        "id": "ba91718f-8276-4fe8-8f42-358975a2368b",
+        "user_id": "00000000-0000-0000-0000-64a613c36e11",
+        "delta_credits": 10,
+        "balance_after": 10,
+        "entry_type": "PLAN_PURCHASE",
+        "reference_id": null,
+        "description": "Seed 10 credits",
+        "created_at": "2026-10-01T18:40:16.257Z"
+      },
+      {
+        "id": "d882227b-baed-4e5f-a2cf-d5be75d391d5",
+        "user_id": "00000000-0000-0000-0000-64a613c36e11",
+        "delta_credits": -4,
+        "balance_after": 6,
+        "entry_type": "CHECKIN_DEBIT",
+        "reference_id": null,
+        "description": "Concurrent debit test",
+        "created_at": "2026-10-01T18:40:16.356Z"
+      },
+      {
+        "id": "694db565-e45b-4688-af91-4f8be21d151f",
+        "user_id": "00000000-0000-0000-0000-64a613c36e11",
+        "delta_credits": -4,
+        "balance_after": 2,
+        "entry_type": "CHECKIN_DEBIT",
+        "reference_id": null,
+        "description": "Concurrent debit test",
+        "created_at": "2026-10-01T18:40:16.381Z"
+      },
+      {
+        "id": "9c74805c-b31d-47c6-b712-79c018a3a622",
+        "user_id": "00000000-0000-0000-0000-000000000003",
+        "delta_credits": 30,
+        "balance_after": 30,
+        "entry_type": "PLAN_PURCHASE",
+        "reference_id": null,
+        "description": "Shaparak RRN: RRN_IDEM_1790880016485",
+        "created_at": "2026-10-01T18:40:16.486Z"
+      },
+      {
+        "id": "2fe22ac7-0b10-42d3-81ad-5d08ede7bbfe",
+        "user_id": "00000000-0000-0000-0000-000000000003",
+        "delta_credits": -4,
+        "balance_after": 20,
+        "entry_type": "CHECKIN_DEBIT",
+        "reference_id": "3b794cf9-8256-4460-92c7-abf86589659e",
+        "description": "Checkin debit",
+        "created_at": "2026-10-01T18:40:16.554Z"
+      },
+      {
+        "id": "635ad992-4c85-4f08-830c-d2b6a3b66afd",
+        "user_id": "00000000-0000-0000-0000-000000000003",
+        "delta_credits": -4,
+        "balance_after": 16,
+        "entry_type": "CHECKIN_DEBIT",
+        "reference_id": "d9a1e22c-70a4-4cb6-af13-571d58ca26cd",
+        "description": "Concurrent checkin debit",
+        "created_at": "2026-10-01T18:40:16.561Z"
+      },
+      {
+        "id": "cc96eab3-8538-4893-8e99-bebdafaef5a3",
+        "user_id": "00000000-0000-0000-0000-000000000003",
+        "delta_credits": -4,
+        "balance_after": 12,
+        "entry_type": "CHECKIN_DEBIT",
+        "reference_id": "3f84b0c5-1c52-405d-bd87-380d18cd07ac",
+        "description": "Primary debit",
+        "created_at": "2026-10-01T18:40:16.573Z"
+      },
+      {
+        "id": "55d442cf-cc89-4651-ac7f-86464d031f41",
+        "user_id": "00000000-0000-0000-0000-9d8b09baa4a4",
+        "delta_credits": 10,
+        "balance_after": 10,
+        "entry_type": "PLAN_PURCHASE",
+        "reference_id": null,
+        "description": "Seed 10 credits",
+        "created_at": "2026-10-01T18:41:49.197Z"
+      },
+      {
+        "id": "c90386c3-3a0f-46ca-8233-772f286e4105",
+        "user_id": "00000000-0000-0000-0000-9d8b09baa4a4",
+        "delta_credits": -4,
+        "balance_after": 6,
+        "entry_type": "CHECKIN_DEBIT",
+        "reference_id": null,
+        "description": "Concurrent debit test",
+        "created_at": "2026-10-01T18:41:49.200Z"
+      },
+      {
+        "id": "7664a26f-5155-493d-a5bb-f633c3029f4d",
+        "user_id": "00000000-0000-0000-0000-9d8b09baa4a4",
+        "delta_credits": -4,
+        "balance_after": 2,
+        "entry_type": "CHECKIN_DEBIT",
+        "reference_id": null,
+        "description": "Concurrent debit test",
+        "created_at": "2026-10-01T18:41:49.225Z"
+      },
+      {
+        "id": "253a9e51-7660-4a4c-81cd-eddcc26dec9a",
+        "user_id": "00000000-0000-0000-0000-000000000003",
+        "delta_credits": 30,
+        "balance_after": 42,
+        "entry_type": "PLAN_PURCHASE",
+        "reference_id": null,
+        "description": "Shaparak RRN: RRN_IDEM_1790880109328",
+        "created_at": "2026-10-01T18:41:49.329Z"
+      },
+      {
+        "id": "6d4fa33d-7a78-4378-abaa-932929f63df4",
+        "user_id": "00000000-0000-0000-0000-000000000003",
+        "delta_credits": -4,
+        "balance_after": 20,
+        "entry_type": "CHECKIN_DEBIT",
+        "reference_id": "a25cb0dc-c916-4fcc-90a2-b65cf9c790f2",
+        "description": "Checkin debit",
+        "created_at": "2026-10-01T18:41:49.397Z"
+      },
+      {
+        "id": "2f2cedb3-edc4-4d51-aa52-c7f15446b6d3",
+        "user_id": "00000000-0000-0000-0000-000000000003",
+        "delta_credits": -4,
+        "balance_after": 16,
+        "entry_type": "CHECKIN_DEBIT",
+        "reference_id": "47137f33-d9c3-4170-a548-f93254a44555",
+        "description": "Concurrent checkin debit",
+        "created_at": "2026-10-01T18:41:49.406Z"
+      },
+      {
+        "id": "1a03241f-f4d8-4332-b26c-1c1728db1757",
+        "user_id": "00000000-0000-0000-0000-000000000003",
+        "delta_credits": -4,
+        "balance_after": 12,
+        "entry_type": "CHECKIN_DEBIT",
+        "reference_id": "9ecf06cc-0ad7-4179-b35e-48c760d5af16",
+        "description": "Primary debit",
+        "created_at": "2026-10-01T18:41:49.414Z"
+      },
+      {
+        "id": "2eb6927e-77fc-40d1-bf1a-c79526e71265",
+        "user_id": "00000000-0000-0000-0000-62266e7f8426",
+        "delta_credits": 10,
+        "balance_after": 10,
+        "entry_type": "PLAN_PURCHASE",
+        "reference_id": null,
+        "description": "Seed 10 credits",
+        "created_at": "2026-10-01T18:43:19.854Z"
+      },
+      {
+        "id": "d308e8d9-e810-4873-9176-20b47653887a",
+        "user_id": "00000000-0000-0000-0000-62266e7f8426",
+        "delta_credits": -4,
+        "balance_after": 6,
+        "entry_type": "CHECKIN_DEBIT",
+        "reference_id": null,
+        "description": "Concurrent debit test",
+        "created_at": "2026-10-01T18:43:19.856Z"
+      },
+      {
+        "id": "dfc10258-c5d7-4cb8-a273-b864453f3a2d",
+        "user_id": "00000000-0000-0000-0000-62266e7f8426",
+        "delta_credits": -4,
+        "balance_after": 2,
+        "entry_type": "CHECKIN_DEBIT",
+        "reference_id": null,
+        "description": "Concurrent debit test",
+        "created_at": "2026-10-01T18:43:19.881Z"
+      },
+      {
+        "id": "a3dc31f0-5fe1-4548-8558-ce726fdb6278",
+        "user_id": "00000000-0000-0000-0000-000000000003",
+        "delta_credits": 30,
+        "balance_after": 42,
+        "entry_type": "PLAN_PURCHASE",
+        "reference_id": null,
+        "description": "Shaparak RRN: RRN_IDEM_1790880199991",
+        "created_at": "2026-10-01T18:43:19.992Z"
+      },
+      {
+        "id": "39babf9e-8665-466f-beb0-c003fa434f94",
+        "user_id": "00000000-0000-0000-0000-000000000003",
+        "delta_credits": -4,
+        "balance_after": 20,
+        "entry_type": "CHECKIN_DEBIT",
+        "reference_id": "7f5536e9-e92f-4916-9b42-2e3e02ee7ee3",
+        "description": "Checkin debit",
+        "created_at": "2026-10-01T18:43:20.064Z"
+      },
+      {
+        "id": "7b20ab0b-2919-4cc0-bde9-ddc9eb655274",
+        "user_id": "00000000-0000-0000-0000-000000000003",
+        "delta_credits": -4,
+        "balance_after": 16,
+        "entry_type": "CHECKIN_DEBIT",
+        "reference_id": "1c205b66-ee63-4d8a-a2fa-b15b1adaecb1",
+        "description": "Concurrent checkin debit",
+        "created_at": "2026-10-01T18:43:20.070Z"
+      },
+      {
+        "id": "82f88e89-5085-47fd-b95d-d113f34c158b",
+        "user_id": "00000000-0000-0000-0000-000000000003",
+        "delta_credits": -4,
+        "balance_after": 12,
+        "entry_type": "CHECKIN_DEBIT",
+        "reference_id": "15df2e61-7f6d-41a7-bd24-496fcac8b626",
+        "description": "Primary debit",
+        "created_at": "2026-10-01T18:43:20.081Z"
+      }
+    ],
+    "facilities": [
+      {
+        "id": "ec9e7810-3981-4b2d-a48d-7ea8ec96daae",
+        "name_fa": "وزنه‌های آزاد و بدنسازی",
+        "slug": "free_weights",
+        "icon": "dumbbell",
+        "is_premium": false
+      },
+      {
+        "id": "bc2a9c30-1332-436d-957a-8cd219c257de",
+        "name_fa": "دستگاه‌های هوازی",
+        "slug": "cardio",
+        "icon": "activity",
+        "is_premium": false
+      },
+      {
+        "id": "29b71e64-54e8-4c88-8900-5728ac8f6323",
+        "name_fa": "رختکن و کمد اختصاصی",
+        "slug": "lockers",
+        "icon": "lock",
+        "is_premium": false
+      },
+      {
+        "id": "a7d24815-21ad-41ed-a9db-3a7f49f48baf",
+        "name_fa": "دوش و حمام",
+        "slug": "showers",
+        "icon": "droplet",
+        "is_premium": false
+      },
+      {
+        "id": "2fdd4ac6-4ac9-4dc0-9721-c73921d3fad9",
+        "name_fa": "سونا خشک و بخار",
+        "slug": "sauna",
+        "icon": "flame",
+        "is_premium": true
+      },
+      {
+        "id": "50569f4a-151f-4ff7-aa01-3055aa9de3be",
+        "name_fa": "جکوزی و حوضچه آب سرد",
+        "slug": "jacuzzi",
+        "icon": "waves",
+        "is_premium": true
+      },
+      {
+        "id": "17246a75-5380-420d-8124-2553330474ca",
+        "name_fa": "استخر المپیک",
+        "slug": "olympic_pool",
+        "icon": "pool",
+        "is_premium": true
+      },
+      {
+        "id": "ed27fff5-785b-4b66-9916-3216ea6377a1",
+        "name_fa": "باکس کراس‌فیت",
+        "slug": "crossfit",
+        "icon": "zap",
+        "is_premium": true
+      },
+      {
+        "id": "9ca5ef63-fa9e-48b5-bb6f-727cb6789037",
+        "name_fa": "بوفه سلامت و ویتامینه",
+        "slug": "cafe",
+        "icon": "coffee",
+        "is_premium": false
+      }
+    ],
+    "fraud_events": [],
+    "gym_branches": [],
+    "gym_facilities": [],
+    "gym_payable_ledger": [
+      {
+        "id": "3551a7c3-0aea-45a7-9c39-d32ce0f1982d",
+        "gym_id": "10000000-0000-0000-0000-000000000001",
+        "checkin_id": null,
+        "delta_amount_tomans": "-500000",
+        "balance_after": "0",
+        "entry_type": "DISBURSEMENT_PAYA",
+        "settlement_id": "200af583-ba93-49cf-a6d0-fd29638779bb",
+        "description": "Disbursed batch payout",
+        "created_at": "2026-10-01T18:40:16.492Z"
+      },
+      {
+        "id": "7f0f4513-f6d2-4630-ae53-f48eb2304518",
+        "gym_id": "10000000-0000-0000-0000-000000000002",
+        "checkin_id": "3b794cf9-8256-4460-92c7-abf86589659e",
+        "delta_amount_tomans": "65000",
+        "balance_after": "65000",
+        "entry_type": "CHECKIN_EARNING",
+        "settlement_id": null,
+        "description": "Checkin earning",
+        "created_at": "2026-10-01T18:40:16.554Z"
+      },
+      {
+        "id": "7ea56677-4243-46d8-a7aa-cfbf12bdf684",
+        "gym_id": "10000000-0000-0000-0000-000000000002",
+        "checkin_id": "d9a1e22c-70a4-4cb6-af13-571d58ca26cd",
+        "delta_amount_tomans": "65000",
+        "balance_after": "130000",
+        "entry_type": "CHECKIN_EARNING",
+        "settlement_id": null,
+        "description": "Concurrent checkin earning",
+        "created_at": "2026-10-01T18:40:16.561Z"
+      },
+      {
+        "id": "3b9e4fbb-9e90-475a-a1c3-f781829b93c6",
+        "gym_id": "10000000-0000-0000-0000-000000000002",
+        "checkin_id": "71323bc8-9422-4e84-b137-5b41b239a5e2",
+        "delta_amount_tomans": "65000",
+        "balance_after": "195000",
+        "entry_type": "CHECKIN_EARNING",
+        "settlement_id": null,
+        "description": "Primary earning",
+        "created_at": "2026-10-01T18:40:16.575Z"
+      },
+      {
+        "id": "7a1b5da6-9d3d-414b-be5e-7aa94ed1f0b3",
+        "gym_id": "10000000-0000-0000-0000-000000000002",
+        "checkin_id": "a25cb0dc-c916-4fcc-90a2-b65cf9c790f2",
+        "delta_amount_tomans": "65000",
+        "balance_after": "65000",
+        "entry_type": "CHECKIN_EARNING",
+        "settlement_id": null,
+        "description": "Checkin earning",
+        "created_at": "2026-10-01T18:41:49.397Z"
+      },
+      {
+        "id": "7b72caff-af2b-4fc3-b6b6-eb65ede1d72e",
+        "gym_id": "10000000-0000-0000-0000-000000000002",
+        "checkin_id": "47137f33-d9c3-4170-a548-f93254a44555",
+        "delta_amount_tomans": "65000",
+        "balance_after": "130000",
+        "entry_type": "CHECKIN_EARNING",
+        "settlement_id": null,
+        "description": "Concurrent checkin earning",
+        "created_at": "2026-10-01T18:41:49.406Z"
+      },
+      {
+        "id": "ae4f707e-b583-49ab-bafd-c54a494549bc",
+        "gym_id": "10000000-0000-0000-0000-000000000002",
+        "checkin_id": "b5973256-d8d0-47a4-b66a-0a39d93c86e6",
+        "delta_amount_tomans": "65000",
+        "balance_after": "195000",
+        "entry_type": "CHECKIN_EARNING",
+        "settlement_id": null,
+        "description": "Primary earning",
+        "created_at": "2026-10-01T18:41:49.416Z"
+      },
+      {
+        "id": "ca4121ca-4008-44bb-a0a0-aa6b70964a16",
+        "gym_id": "10000000-0000-0000-0000-000000000001",
+        "checkin_id": null,
+        "delta_amount_tomans": "-500000",
+        "balance_after": "0",
+        "entry_type": "DISBURSEMENT_PAYA",
+        "settlement_id": "6a9bd43b-1bb6-48d1-969d-3c713acbf95e",
+        "description": "Disbursed batch payout",
+        "created_at": "2026-10-01T18:43:20.001Z"
+      },
+      {
+        "id": "9b372362-69bd-479f-b004-4419b944cbf8",
+        "gym_id": "10000000-0000-0000-0000-000000000002",
+        "checkin_id": "7f5536e9-e92f-4916-9b42-2e3e02ee7ee3",
+        "delta_amount_tomans": "65000",
+        "balance_after": "65000",
+        "entry_type": "CHECKIN_EARNING",
+        "settlement_id": null,
+        "description": "Checkin earning",
+        "created_at": "2026-10-01T18:43:20.064Z"
+      },
+      {
+        "id": "ef3dbcb4-3f9e-4e80-aba0-299b36e6c480",
+        "gym_id": "10000000-0000-0000-0000-000000000002",
+        "checkin_id": "1c205b66-ee63-4d8a-a2fa-b15b1adaecb1",
+        "delta_amount_tomans": "65000",
+        "balance_after": "130000",
+        "entry_type": "CHECKIN_EARNING",
+        "settlement_id": null,
+        "description": "Concurrent checkin earning",
+        "created_at": "2026-10-01T18:43:20.070Z"
+      },
+      {
+        "id": "cfe990d7-4cff-4d6d-a365-7f72e28a59fa",
+        "gym_id": "10000000-0000-0000-0000-000000000002",
+        "checkin_id": "cfbcdbe8-9a02-4a64-a1b8-15f50f909a2b",
+        "delta_amount_tomans": "65000",
+        "balance_after": "195000",
+        "entry_type": "CHECKIN_EARNING",
+        "settlement_id": null,
+        "description": "Primary earning",
+        "created_at": "2026-10-01T18:43:20.083Z"
+      }
+    ],
+    "gym_pricing_overrides": [
+      {
+        "id": "bd432f5c-e113-4218-a65d-49cdcdc97c47",
+        "gym_id": "10000000-0000-0000-0000-000000000001",
+        "credit_cost": 2,
+        "monetary_payout_tomans": "30000",
+        "offpeak_credit_cost": 2,
+        "peak_credit_cost": 2,
+        "effective_from": "2026-10-01T18:39:35.122Z",
+        "effective_to": null,
+        "created_by_admin_id": null,
+        "notes": "قرارداد استاندارد سطح ۱",
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "b5b401ac-4f0c-476b-8e21-21c73588e81e",
+        "gym_id": "10000000-0000-0000-0000-000000000002",
+        "credit_cost": 4,
+        "monetary_payout_tomans": "65000",
+        "offpeak_credit_cost": 3,
+        "peak_credit_cost": 5,
+        "effective_from": "2026-10-01T18:39:35.122Z",
+        "effective_to": null,
+        "created_by_admin_id": null,
+        "notes": "قرارداد سطح ۲ با تعرفه سانس اوج",
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "645e05f7-3a09-4476-a466-09132ee6cf1f",
+        "gym_id": "10000000-0000-0000-0000-000000000003",
+        "credit_cost": 7,
+        "monetary_payout_tomans": "115000",
+        "offpeak_credit_cost": 6,
+        "peak_credit_cost": 8,
+        "effective_from": "2026-10-01T18:39:35.122Z",
+        "effective_to": null,
+        "created_by_admin_id": null,
+        "notes": "قرارداد سطح ۳ شامل استخر و سونا",
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "aeab40ab-a40f-48c2-a392-79009c36bf8b",
+        "gym_id": "10000000-0000-0000-0000-000000000004",
+        "credit_cost": 14,
+        "monetary_payout_tomans": "230000",
+        "offpeak_credit_cost": 12,
+        "peak_credit_cost": 16,
+        "effective_from": "2026-10-01T18:39:35.122Z",
+        "effective_to": null,
+        "created_by_admin_id": null,
+        "notes": "قرارداد هتل اسپیناس، رزرو قبلی الزامی",
+        "created_at": "2026-10-01T18:39:35.122Z"
+      }
+    ],
+    "gym_sans": [
+      {
+        "id": "81b79da0-8590-413b-ad07-c66a72cdc4d0",
+        "gym_id": "10000000-0000-0000-0000-000000000001",
+        "day_of_week": 0,
+        "gender": "FEMALE",
+        "start_time": "08:00:00",
+        "end_time": "14:00:00",
+        "capacity": 30,
+        "is_peak": true,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "44c265cb-46ee-410d-a55d-e724bf2fe29b",
+        "gym_id": "10000000-0000-0000-0000-000000000001",
+        "day_of_week": 0,
+        "gender": "MALE",
+        "start_time": "14:30:00",
+        "end_time": "23:59:59",
+        "capacity": 40,
+        "is_peak": true,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "3dd62abc-bdd2-4eb0-a1ef-b16168b13456",
+        "gym_id": "10000000-0000-0000-0000-000000000001",
+        "day_of_week": 0,
+        "gender": "MALE",
+        "start_time": "00:00:00",
+        "end_time": "05:00:00",
+        "capacity": 30,
+        "is_peak": false,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "b4087c9e-f1bd-48e0-a92b-a58a00881616",
+        "gym_id": "10000000-0000-0000-0000-000000000001",
+        "day_of_week": 0,
+        "gender": "MALE",
+        "start_time": "05:00:00",
+        "end_time": "14:30:00",
+        "capacity": 30,
+        "is_peak": false,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "e799f589-d7a1-47a8-b47d-3a6beb981b8d",
+        "gym_id": "10000000-0000-0000-0000-000000000001",
+        "day_of_week": 1,
+        "gender": "FEMALE",
+        "start_time": "08:00:00",
+        "end_time": "14:00:00",
+        "capacity": 30,
+        "is_peak": false,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "0a965da2-329d-4ba8-9af5-a4bb0cdd81a1",
+        "gym_id": "10000000-0000-0000-0000-000000000001",
+        "day_of_week": 1,
+        "gender": "MALE",
+        "start_time": "14:30:00",
+        "end_time": "23:59:59",
+        "capacity": 40,
+        "is_peak": true,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "3ba3381f-3d4f-45c6-bb91-1ca3550ddfd9",
+        "gym_id": "10000000-0000-0000-0000-000000000001",
+        "day_of_week": 1,
+        "gender": "MALE",
+        "start_time": "00:00:00",
+        "end_time": "05:00:00",
+        "capacity": 30,
+        "is_peak": false,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "447c920e-8771-4a35-80f0-97554541f528",
+        "gym_id": "10000000-0000-0000-0000-000000000001",
+        "day_of_week": 1,
+        "gender": "MALE",
+        "start_time": "05:00:00",
+        "end_time": "14:30:00",
+        "capacity": 30,
+        "is_peak": false,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "9cd5eefa-c058-4cbd-ad31-0e40804e2fcb",
+        "gym_id": "10000000-0000-0000-0000-000000000001",
+        "day_of_week": 2,
+        "gender": "FEMALE",
+        "start_time": "08:00:00",
+        "end_time": "14:00:00",
+        "capacity": 30,
+        "is_peak": true,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "2de41289-5a4c-4137-bb7d-5d77b602f626",
+        "gym_id": "10000000-0000-0000-0000-000000000001",
+        "day_of_week": 2,
+        "gender": "MALE",
+        "start_time": "14:30:00",
+        "end_time": "23:59:59",
+        "capacity": 40,
+        "is_peak": true,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "917b2e47-24c1-41c7-9747-96f4b009aa77",
+        "gym_id": "10000000-0000-0000-0000-000000000001",
+        "day_of_week": 2,
+        "gender": "MALE",
+        "start_time": "00:00:00",
+        "end_time": "05:00:00",
+        "capacity": 30,
+        "is_peak": false,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "147079bb-6665-4794-81fb-a67c9a138c3b",
+        "gym_id": "10000000-0000-0000-0000-000000000001",
+        "day_of_week": 2,
+        "gender": "MALE",
+        "start_time": "05:00:00",
+        "end_time": "14:30:00",
+        "capacity": 30,
+        "is_peak": false,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "05d9268a-cd49-4c06-bca0-ab9b762bbc6a",
+        "gym_id": "10000000-0000-0000-0000-000000000001",
+        "day_of_week": 3,
+        "gender": "FEMALE",
+        "start_time": "08:00:00",
+        "end_time": "14:00:00",
+        "capacity": 30,
+        "is_peak": false,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "b6cde940-31d4-4ad0-9afb-245e96ebe9b3",
+        "gym_id": "10000000-0000-0000-0000-000000000001",
+        "day_of_week": 3,
+        "gender": "MALE",
+        "start_time": "14:30:00",
+        "end_time": "23:59:59",
+        "capacity": 40,
+        "is_peak": true,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "1b8b8ec9-92dd-459f-8c26-34a7aa3b631c",
+        "gym_id": "10000000-0000-0000-0000-000000000001",
+        "day_of_week": 3,
+        "gender": "MALE",
+        "start_time": "00:00:00",
+        "end_time": "05:00:00",
+        "capacity": 30,
+        "is_peak": false,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "e7957fbf-0780-4b93-b4a2-a036a9d67fbc",
+        "gym_id": "10000000-0000-0000-0000-000000000001",
+        "day_of_week": 3,
+        "gender": "MALE",
+        "start_time": "05:00:00",
+        "end_time": "14:30:00",
+        "capacity": 30,
+        "is_peak": false,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "acd62c91-801a-4940-8b6b-b47684d7ea6d",
+        "gym_id": "10000000-0000-0000-0000-000000000001",
+        "day_of_week": 4,
+        "gender": "FEMALE",
+        "start_time": "08:00:00",
+        "end_time": "14:00:00",
+        "capacity": 30,
+        "is_peak": false,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "d977c755-95d3-4095-9561-747f4cdcfe81",
+        "gym_id": "10000000-0000-0000-0000-000000000001",
+        "day_of_week": 4,
+        "gender": "MALE",
+        "start_time": "14:30:00",
+        "end_time": "23:59:59",
+        "capacity": 40,
+        "is_peak": true,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "2e8c94e0-fa43-4790-9085-0a07a820e0b9",
+        "gym_id": "10000000-0000-0000-0000-000000000001",
+        "day_of_week": 4,
+        "gender": "MALE",
+        "start_time": "00:00:00",
+        "end_time": "05:00:00",
+        "capacity": 30,
+        "is_peak": false,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "f05df670-16ba-44da-a587-f924491422bd",
+        "gym_id": "10000000-0000-0000-0000-000000000001",
+        "day_of_week": 4,
+        "gender": "MALE",
+        "start_time": "05:00:00",
+        "end_time": "14:30:00",
+        "capacity": 30,
+        "is_peak": false,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "4ad0a51e-58f0-4254-82fe-f1becacdfa57",
+        "gym_id": "10000000-0000-0000-0000-000000000001",
+        "day_of_week": 5,
+        "gender": "FEMALE",
+        "start_time": "08:00:00",
+        "end_time": "14:00:00",
+        "capacity": 30,
+        "is_peak": false,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "809032d0-14a2-4757-a655-f6ec68915e7b",
+        "gym_id": "10000000-0000-0000-0000-000000000001",
+        "day_of_week": 5,
+        "gender": "MALE",
+        "start_time": "14:30:00",
+        "end_time": "23:59:59",
+        "capacity": 40,
+        "is_peak": true,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "dd87b74d-f21c-4e16-a551-d5cac6db9995",
+        "gym_id": "10000000-0000-0000-0000-000000000001",
+        "day_of_week": 5,
+        "gender": "MALE",
+        "start_time": "00:00:00",
+        "end_time": "05:00:00",
+        "capacity": 30,
+        "is_peak": false,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "548aa2bc-c303-4fb2-9de6-1bba8b89bba7",
+        "gym_id": "10000000-0000-0000-0000-000000000001",
+        "day_of_week": 5,
+        "gender": "MALE",
+        "start_time": "05:00:00",
+        "end_time": "14:30:00",
+        "capacity": 30,
+        "is_peak": false,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "dce75963-52d8-4734-8c68-74fb5bebd10b",
+        "gym_id": "10000000-0000-0000-0000-000000000001",
+        "day_of_week": 6,
+        "gender": "MALE",
+        "start_time": "10:00:00",
+        "end_time": "18:00:00",
+        "capacity": 25,
+        "is_peak": true,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "8ede6ae2-4669-4841-a53f-7aa6a88fbfd9",
+        "gym_id": "10000000-0000-0000-0000-000000000001",
+        "day_of_week": 6,
+        "gender": "MALE",
+        "start_time": "00:00:00",
+        "end_time": "05:00:00",
+        "capacity": 25,
+        "is_peak": false,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "a0e7e083-ed02-40fc-b509-1f814f0ee2ca",
+        "gym_id": "10000000-0000-0000-0000-000000000002",
+        "day_of_week": 0,
+        "gender": "FEMALE",
+        "start_time": "08:00:00",
+        "end_time": "14:00:00",
+        "capacity": 30,
+        "is_peak": true,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "61e12808-d79e-4311-9bf8-ae95ef23f5ef",
+        "gym_id": "10000000-0000-0000-0000-000000000002",
+        "day_of_week": 0,
+        "gender": "MALE",
+        "start_time": "14:30:00",
+        "end_time": "23:59:59",
+        "capacity": 40,
+        "is_peak": true,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "d7340a90-f338-4494-907b-9b87a3940295",
+        "gym_id": "10000000-0000-0000-0000-000000000002",
+        "day_of_week": 0,
+        "gender": "MALE",
+        "start_time": "00:00:00",
+        "end_time": "05:00:00",
+        "capacity": 30,
+        "is_peak": false,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "c2951832-4a6b-49e8-835b-9da024f1df01",
+        "gym_id": "10000000-0000-0000-0000-000000000002",
+        "day_of_week": 0,
+        "gender": "MALE",
+        "start_time": "05:00:00",
+        "end_time": "14:30:00",
+        "capacity": 30,
+        "is_peak": false,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "567ce85f-1c00-49f2-8e4e-e4b8b3881a95",
+        "gym_id": "10000000-0000-0000-0000-000000000002",
+        "day_of_week": 1,
+        "gender": "FEMALE",
+        "start_time": "08:00:00",
+        "end_time": "14:00:00",
+        "capacity": 30,
+        "is_peak": false,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "e8991588-133d-4c4b-8672-cdf9016c8407",
+        "gym_id": "10000000-0000-0000-0000-000000000002",
+        "day_of_week": 1,
+        "gender": "MALE",
+        "start_time": "14:30:00",
+        "end_time": "23:59:59",
+        "capacity": 40,
+        "is_peak": true,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "19887be2-426d-4b14-8bce-a8b287dbf413",
+        "gym_id": "10000000-0000-0000-0000-000000000002",
+        "day_of_week": 1,
+        "gender": "MALE",
+        "start_time": "00:00:00",
+        "end_time": "05:00:00",
+        "capacity": 30,
+        "is_peak": false,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "0927435f-5176-4da4-bc13-26143753b9ed",
+        "gym_id": "10000000-0000-0000-0000-000000000002",
+        "day_of_week": 1,
+        "gender": "MALE",
+        "start_time": "05:00:00",
+        "end_time": "14:30:00",
+        "capacity": 30,
+        "is_peak": false,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "84c37a84-26b1-45ac-93c1-bfb5ca7d3ed9",
+        "gym_id": "10000000-0000-0000-0000-000000000002",
+        "day_of_week": 2,
+        "gender": "FEMALE",
+        "start_time": "08:00:00",
+        "end_time": "14:00:00",
+        "capacity": 30,
+        "is_peak": true,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "7d8b8735-7a53-4ff6-b6ab-eb43da56c8dc",
+        "gym_id": "10000000-0000-0000-0000-000000000002",
+        "day_of_week": 2,
+        "gender": "MALE",
+        "start_time": "14:30:00",
+        "end_time": "23:59:59",
+        "capacity": 40,
+        "is_peak": true,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "c76527d2-6d45-484e-ac99-9a0b5bbd8e57",
+        "gym_id": "10000000-0000-0000-0000-000000000002",
+        "day_of_week": 2,
+        "gender": "MALE",
+        "start_time": "00:00:00",
+        "end_time": "05:00:00",
+        "capacity": 30,
+        "is_peak": false,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "fb68254c-ca5e-4032-bccf-8b76c19af339",
+        "gym_id": "10000000-0000-0000-0000-000000000002",
+        "day_of_week": 2,
+        "gender": "MALE",
+        "start_time": "05:00:00",
+        "end_time": "14:30:00",
+        "capacity": 30,
+        "is_peak": false,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "a72bf42c-8680-47f1-848f-4a37f4a2fced",
+        "gym_id": "10000000-0000-0000-0000-000000000002",
+        "day_of_week": 3,
+        "gender": "FEMALE",
+        "start_time": "08:00:00",
+        "end_time": "14:00:00",
+        "capacity": 30,
+        "is_peak": false,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "0d90be6d-dbdf-421c-9961-7c62bfe70bab",
+        "gym_id": "10000000-0000-0000-0000-000000000002",
+        "day_of_week": 3,
+        "gender": "MALE",
+        "start_time": "14:30:00",
+        "end_time": "23:59:59",
+        "capacity": 40,
+        "is_peak": true,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "93b17a8d-fa94-4fda-b67a-23e97ee3b27e",
+        "gym_id": "10000000-0000-0000-0000-000000000002",
+        "day_of_week": 3,
+        "gender": "MALE",
+        "start_time": "00:00:00",
+        "end_time": "05:00:00",
+        "capacity": 30,
+        "is_peak": false,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "e483e94e-7f52-4b54-b3a8-3354dc9d7e42",
+        "gym_id": "10000000-0000-0000-0000-000000000002",
+        "day_of_week": 3,
+        "gender": "MALE",
+        "start_time": "05:00:00",
+        "end_time": "14:30:00",
+        "capacity": 30,
+        "is_peak": false,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "2b11c7c7-e2cf-4728-b44d-1faade789f3d",
+        "gym_id": "10000000-0000-0000-0000-000000000002",
+        "day_of_week": 4,
+        "gender": "FEMALE",
+        "start_time": "08:00:00",
+        "end_time": "14:00:00",
+        "capacity": 30,
+        "is_peak": false,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "b0e374af-e3d3-46e1-b753-adf427a859dd",
+        "gym_id": "10000000-0000-0000-0000-000000000002",
+        "day_of_week": 4,
+        "gender": "MALE",
+        "start_time": "14:30:00",
+        "end_time": "23:59:59",
+        "capacity": 40,
+        "is_peak": true,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "4962830f-0ac4-4530-9fe8-d3ede339dce6",
+        "gym_id": "10000000-0000-0000-0000-000000000002",
+        "day_of_week": 4,
+        "gender": "MALE",
+        "start_time": "00:00:00",
+        "end_time": "05:00:00",
+        "capacity": 30,
+        "is_peak": false,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "4bf04fe4-c33a-4317-9620-deaa069d9049",
+        "gym_id": "10000000-0000-0000-0000-000000000002",
+        "day_of_week": 4,
+        "gender": "MALE",
+        "start_time": "05:00:00",
+        "end_time": "14:30:00",
+        "capacity": 30,
+        "is_peak": false,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "9fd5b711-01e3-48d6-94a8-9ceb70aeb08b",
+        "gym_id": "10000000-0000-0000-0000-000000000002",
+        "day_of_week": 5,
+        "gender": "FEMALE",
+        "start_time": "08:00:00",
+        "end_time": "14:00:00",
+        "capacity": 30,
+        "is_peak": false,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "b73613ce-87ff-4b7a-b689-78d2ca23d82f",
+        "gym_id": "10000000-0000-0000-0000-000000000002",
+        "day_of_week": 5,
+        "gender": "MALE",
+        "start_time": "14:30:00",
+        "end_time": "23:59:59",
+        "capacity": 40,
+        "is_peak": true,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "b192db22-872f-4ce9-ad95-376af0b50f67",
+        "gym_id": "10000000-0000-0000-0000-000000000002",
+        "day_of_week": 5,
+        "gender": "MALE",
+        "start_time": "00:00:00",
+        "end_time": "05:00:00",
+        "capacity": 30,
+        "is_peak": false,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "21280e8e-a98f-456b-87bb-f9df0b0cdf45",
+        "gym_id": "10000000-0000-0000-0000-000000000002",
+        "day_of_week": 5,
+        "gender": "MALE",
+        "start_time": "05:00:00",
+        "end_time": "14:30:00",
+        "capacity": 30,
+        "is_peak": false,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "fefe7ff5-2ab7-49df-b305-2594a566f61a",
+        "gym_id": "10000000-0000-0000-0000-000000000002",
+        "day_of_week": 6,
+        "gender": "MALE",
+        "start_time": "10:00:00",
+        "end_time": "18:00:00",
+        "capacity": 25,
+        "is_peak": true,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "5c06dd93-287a-488e-81cc-8d9654406eb3",
+        "gym_id": "10000000-0000-0000-0000-000000000002",
+        "day_of_week": 6,
+        "gender": "MALE",
+        "start_time": "00:00:00",
+        "end_time": "05:00:00",
+        "capacity": 25,
+        "is_peak": false,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "deca4e1b-a264-4309-92db-7745f0ad5c51",
+        "gym_id": "10000000-0000-0000-0000-000000000003",
+        "day_of_week": 0,
+        "gender": "FEMALE",
+        "start_time": "08:00:00",
+        "end_time": "14:00:00",
+        "capacity": 30,
+        "is_peak": true,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "2b0bbe11-7fae-44f2-a9f8-e1d99e196967",
+        "gym_id": "10000000-0000-0000-0000-000000000003",
+        "day_of_week": 0,
+        "gender": "MALE",
+        "start_time": "14:30:00",
+        "end_time": "23:59:59",
+        "capacity": 40,
+        "is_peak": true,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "b7c94ff0-17f1-4385-b831-6b5a3670fe21",
+        "gym_id": "10000000-0000-0000-0000-000000000003",
+        "day_of_week": 0,
+        "gender": "MALE",
+        "start_time": "00:00:00",
+        "end_time": "05:00:00",
+        "capacity": 30,
+        "is_peak": false,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "761d252a-4dfe-40e5-aa8f-5ba8c98618d7",
+        "gym_id": "10000000-0000-0000-0000-000000000003",
+        "day_of_week": 0,
+        "gender": "MALE",
+        "start_time": "05:00:00",
+        "end_time": "14:30:00",
+        "capacity": 30,
+        "is_peak": false,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "15c3abaa-57d2-44bf-999f-eea1e945e7d4",
+        "gym_id": "10000000-0000-0000-0000-000000000003",
+        "day_of_week": 1,
+        "gender": "FEMALE",
+        "start_time": "08:00:00",
+        "end_time": "14:00:00",
+        "capacity": 30,
+        "is_peak": false,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "ebb91d92-5527-4f33-a8ec-f706e02dfa52",
+        "gym_id": "10000000-0000-0000-0000-000000000003",
+        "day_of_week": 1,
+        "gender": "MALE",
+        "start_time": "14:30:00",
+        "end_time": "23:59:59",
+        "capacity": 40,
+        "is_peak": true,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "e7112097-ac1f-4bc6-ac75-2b692f24e4b7",
+        "gym_id": "10000000-0000-0000-0000-000000000003",
+        "day_of_week": 1,
+        "gender": "MALE",
+        "start_time": "00:00:00",
+        "end_time": "05:00:00",
+        "capacity": 30,
+        "is_peak": false,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "95326cc7-7f93-4457-96fb-6c12e5b8186d",
+        "gym_id": "10000000-0000-0000-0000-000000000003",
+        "day_of_week": 1,
+        "gender": "MALE",
+        "start_time": "05:00:00",
+        "end_time": "14:30:00",
+        "capacity": 30,
+        "is_peak": false,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "8702e414-4104-4b38-9cca-0af0531d2a3e",
+        "gym_id": "10000000-0000-0000-0000-000000000003",
+        "day_of_week": 2,
+        "gender": "FEMALE",
+        "start_time": "08:00:00",
+        "end_time": "14:00:00",
+        "capacity": 30,
+        "is_peak": true,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "423a8e78-44c2-4185-9fc4-c001dc14d33e",
+        "gym_id": "10000000-0000-0000-0000-000000000003",
+        "day_of_week": 2,
+        "gender": "MALE",
+        "start_time": "14:30:00",
+        "end_time": "23:59:59",
+        "capacity": 40,
+        "is_peak": true,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "460c9d59-f553-466e-9d18-96e6ec2b7e3e",
+        "gym_id": "10000000-0000-0000-0000-000000000003",
+        "day_of_week": 2,
+        "gender": "MALE",
+        "start_time": "00:00:00",
+        "end_time": "05:00:00",
+        "capacity": 30,
+        "is_peak": false,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "454d6a4e-b5e6-4263-bf4b-67a65a331b23",
+        "gym_id": "10000000-0000-0000-0000-000000000003",
+        "day_of_week": 2,
+        "gender": "MALE",
+        "start_time": "05:00:00",
+        "end_time": "14:30:00",
+        "capacity": 30,
+        "is_peak": false,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "1771579d-a4e8-4bd4-88cd-cba54677e7b7",
+        "gym_id": "10000000-0000-0000-0000-000000000003",
+        "day_of_week": 3,
+        "gender": "FEMALE",
+        "start_time": "08:00:00",
+        "end_time": "14:00:00",
+        "capacity": 30,
+        "is_peak": false,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "cbe550c6-02cd-4df1-ac46-5dd88625765c",
+        "gym_id": "10000000-0000-0000-0000-000000000003",
+        "day_of_week": 3,
+        "gender": "MALE",
+        "start_time": "14:30:00",
+        "end_time": "23:59:59",
+        "capacity": 40,
+        "is_peak": true,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "2516adf9-cab7-4244-83e5-af8f436b74e1",
+        "gym_id": "10000000-0000-0000-0000-000000000003",
+        "day_of_week": 3,
+        "gender": "MALE",
+        "start_time": "00:00:00",
+        "end_time": "05:00:00",
+        "capacity": 30,
+        "is_peak": false,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "f800f0ba-d2e8-4207-8666-2628adab016c",
+        "gym_id": "10000000-0000-0000-0000-000000000003",
+        "day_of_week": 3,
+        "gender": "MALE",
+        "start_time": "05:00:00",
+        "end_time": "14:30:00",
+        "capacity": 30,
+        "is_peak": false,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "e1f27adc-1120-4d82-a448-e48d7d925ae2",
+        "gym_id": "10000000-0000-0000-0000-000000000003",
+        "day_of_week": 4,
+        "gender": "FEMALE",
+        "start_time": "08:00:00",
+        "end_time": "14:00:00",
+        "capacity": 30,
+        "is_peak": false,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "e9b4aae6-937a-49c1-993a-fee5c2faf6c8",
+        "gym_id": "10000000-0000-0000-0000-000000000003",
+        "day_of_week": 4,
+        "gender": "MALE",
+        "start_time": "14:30:00",
+        "end_time": "23:59:59",
+        "capacity": 40,
+        "is_peak": true,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "2cb62955-f20f-418e-8b26-4ba4c2154eba",
+        "gym_id": "10000000-0000-0000-0000-000000000003",
+        "day_of_week": 4,
+        "gender": "MALE",
+        "start_time": "00:00:00",
+        "end_time": "05:00:00",
+        "capacity": 30,
+        "is_peak": false,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "c58ff169-209f-4a05-8399-26475ef5d364",
+        "gym_id": "10000000-0000-0000-0000-000000000003",
+        "day_of_week": 4,
+        "gender": "MALE",
+        "start_time": "05:00:00",
+        "end_time": "14:30:00",
+        "capacity": 30,
+        "is_peak": false,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "12d1fd48-ed4b-4d96-b7a5-db34872ded25",
+        "gym_id": "10000000-0000-0000-0000-000000000003",
+        "day_of_week": 5,
+        "gender": "FEMALE",
+        "start_time": "08:00:00",
+        "end_time": "14:00:00",
+        "capacity": 30,
+        "is_peak": false,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "ab417f87-45ea-4158-9917-88a96f3aad95",
+        "gym_id": "10000000-0000-0000-0000-000000000003",
+        "day_of_week": 5,
+        "gender": "MALE",
+        "start_time": "14:30:00",
+        "end_time": "23:59:59",
+        "capacity": 40,
+        "is_peak": true,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "86d5a42e-452e-4994-bd11-c1bde906c65e",
+        "gym_id": "10000000-0000-0000-0000-000000000003",
+        "day_of_week": 5,
+        "gender": "MALE",
+        "start_time": "00:00:00",
+        "end_time": "05:00:00",
+        "capacity": 30,
+        "is_peak": false,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "6284fdc1-b826-4788-942f-acc30e6e2e0f",
+        "gym_id": "10000000-0000-0000-0000-000000000003",
+        "day_of_week": 5,
+        "gender": "MALE",
+        "start_time": "05:00:00",
+        "end_time": "14:30:00",
+        "capacity": 30,
+        "is_peak": false,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "5fa26b2a-3e85-47c2-b153-d01512b557be",
+        "gym_id": "10000000-0000-0000-0000-000000000003",
+        "day_of_week": 6,
+        "gender": "MALE",
+        "start_time": "10:00:00",
+        "end_time": "18:00:00",
+        "capacity": 25,
+        "is_peak": true,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "4791f2f0-44eb-42d6-a81e-905c54dbf1c6",
+        "gym_id": "10000000-0000-0000-0000-000000000003",
+        "day_of_week": 6,
+        "gender": "MALE",
+        "start_time": "00:00:00",
+        "end_time": "05:00:00",
+        "capacity": 25,
+        "is_peak": false,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "bfda4c0b-0cc2-4b7d-ad19-cb16898bd6e3",
+        "gym_id": "10000000-0000-0000-0000-000000000004",
+        "day_of_week": 0,
+        "gender": "FEMALE",
+        "start_time": "08:00:00",
+        "end_time": "14:00:00",
+        "capacity": 30,
+        "is_peak": true,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "b5b1428c-417f-4b7e-9d5d-ed06fd6fd4de",
+        "gym_id": "10000000-0000-0000-0000-000000000004",
+        "day_of_week": 0,
+        "gender": "MALE",
+        "start_time": "14:30:00",
+        "end_time": "23:59:59",
+        "capacity": 40,
+        "is_peak": true,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "0e99c3d9-1cf3-4ac6-a2a3-5c7f0ef28504",
+        "gym_id": "10000000-0000-0000-0000-000000000004",
+        "day_of_week": 0,
+        "gender": "MALE",
+        "start_time": "00:00:00",
+        "end_time": "05:00:00",
+        "capacity": 30,
+        "is_peak": false,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "1f39893c-62e5-428f-a71b-2f5eb400deea",
+        "gym_id": "10000000-0000-0000-0000-000000000004",
+        "day_of_week": 0,
+        "gender": "MALE",
+        "start_time": "05:00:00",
+        "end_time": "14:30:00",
+        "capacity": 30,
+        "is_peak": false,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "99d94233-a8b0-49b3-8685-dac799e7060d",
+        "gym_id": "10000000-0000-0000-0000-000000000004",
+        "day_of_week": 1,
+        "gender": "FEMALE",
+        "start_time": "08:00:00",
+        "end_time": "14:00:00",
+        "capacity": 30,
+        "is_peak": false,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "0912ed87-b3dd-437e-bbc7-568b05fd2e57",
+        "gym_id": "10000000-0000-0000-0000-000000000004",
+        "day_of_week": 1,
+        "gender": "MALE",
+        "start_time": "14:30:00",
+        "end_time": "23:59:59",
+        "capacity": 40,
+        "is_peak": true,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "109c216a-1891-4ad8-bfbb-4b76956003f7",
+        "gym_id": "10000000-0000-0000-0000-000000000004",
+        "day_of_week": 1,
+        "gender": "MALE",
+        "start_time": "00:00:00",
+        "end_time": "05:00:00",
+        "capacity": 30,
+        "is_peak": false,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "23ea6238-e042-4b5e-8ffa-1149efca9c53",
+        "gym_id": "10000000-0000-0000-0000-000000000004",
+        "day_of_week": 1,
+        "gender": "MALE",
+        "start_time": "05:00:00",
+        "end_time": "14:30:00",
+        "capacity": 30,
+        "is_peak": false,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "e9923d81-4b4a-4f95-bb45-189f3e4d49b1",
+        "gym_id": "10000000-0000-0000-0000-000000000004",
+        "day_of_week": 2,
+        "gender": "FEMALE",
+        "start_time": "08:00:00",
+        "end_time": "14:00:00",
+        "capacity": 30,
+        "is_peak": true,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "18333046-1f84-44b4-95a4-15df3155af8a",
+        "gym_id": "10000000-0000-0000-0000-000000000004",
+        "day_of_week": 2,
+        "gender": "MALE",
+        "start_time": "14:30:00",
+        "end_time": "23:59:59",
+        "capacity": 40,
+        "is_peak": true,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "b7a7c45f-4608-4d74-85db-d819b627ca49",
+        "gym_id": "10000000-0000-0000-0000-000000000004",
+        "day_of_week": 2,
+        "gender": "MALE",
+        "start_time": "00:00:00",
+        "end_time": "05:00:00",
+        "capacity": 30,
+        "is_peak": false,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "bdb09be7-a05f-4eaf-95fb-bc5b22839cb7",
+        "gym_id": "10000000-0000-0000-0000-000000000004",
+        "day_of_week": 2,
+        "gender": "MALE",
+        "start_time": "05:00:00",
+        "end_time": "14:30:00",
+        "capacity": 30,
+        "is_peak": false,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "cb86a5b7-ec49-4e0a-afb7-447b9c908f8e",
+        "gym_id": "10000000-0000-0000-0000-000000000004",
+        "day_of_week": 3,
+        "gender": "FEMALE",
+        "start_time": "08:00:00",
+        "end_time": "14:00:00",
+        "capacity": 30,
+        "is_peak": false,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "d636f62e-b7f0-4b13-bf5e-dfdd8743f4f4",
+        "gym_id": "10000000-0000-0000-0000-000000000004",
+        "day_of_week": 3,
+        "gender": "MALE",
+        "start_time": "14:30:00",
+        "end_time": "23:59:59",
+        "capacity": 40,
+        "is_peak": true,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "0e7917a1-be40-46cb-80b2-4cab71fca530",
+        "gym_id": "10000000-0000-0000-0000-000000000004",
+        "day_of_week": 3,
+        "gender": "MALE",
+        "start_time": "00:00:00",
+        "end_time": "05:00:00",
+        "capacity": 30,
+        "is_peak": false,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "8e024117-3df3-4ff2-b7b3-170e7a00db47",
+        "gym_id": "10000000-0000-0000-0000-000000000004",
+        "day_of_week": 3,
+        "gender": "MALE",
+        "start_time": "05:00:00",
+        "end_time": "14:30:00",
+        "capacity": 30,
+        "is_peak": false,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "e432fc5a-75b1-4807-8cb4-10eae6bd7c6f",
+        "gym_id": "10000000-0000-0000-0000-000000000004",
+        "day_of_week": 4,
+        "gender": "FEMALE",
+        "start_time": "08:00:00",
+        "end_time": "14:00:00",
+        "capacity": 30,
+        "is_peak": false,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "0e903d04-8b3d-4fff-b582-dcdc3dfcfd8b",
+        "gym_id": "10000000-0000-0000-0000-000000000004",
+        "day_of_week": 4,
+        "gender": "MALE",
+        "start_time": "14:30:00",
+        "end_time": "23:59:59",
+        "capacity": 40,
+        "is_peak": true,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "38daa7c1-7f7e-4591-b0ba-dcb8022b1dd8",
+        "gym_id": "10000000-0000-0000-0000-000000000004",
+        "day_of_week": 4,
+        "gender": "MALE",
+        "start_time": "00:00:00",
+        "end_time": "05:00:00",
+        "capacity": 30,
+        "is_peak": false,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "4ea9e8a0-b7ce-4313-8f35-d5a35d4e8381",
+        "gym_id": "10000000-0000-0000-0000-000000000004",
+        "day_of_week": 4,
+        "gender": "MALE",
+        "start_time": "05:00:00",
+        "end_time": "14:30:00",
+        "capacity": 30,
+        "is_peak": false,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "5168b214-c672-4574-888c-1bcc06163644",
+        "gym_id": "10000000-0000-0000-0000-000000000004",
+        "day_of_week": 5,
+        "gender": "FEMALE",
+        "start_time": "08:00:00",
+        "end_time": "14:00:00",
+        "capacity": 30,
+        "is_peak": false,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "e79cd64b-8239-4c58-8a29-c2d5038214e2",
+        "gym_id": "10000000-0000-0000-0000-000000000004",
+        "day_of_week": 5,
+        "gender": "MALE",
+        "start_time": "14:30:00",
+        "end_time": "23:59:59",
+        "capacity": 40,
+        "is_peak": true,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "06d24116-d293-4855-a19a-c3495d6547f2",
+        "gym_id": "10000000-0000-0000-0000-000000000004",
+        "day_of_week": 5,
+        "gender": "MALE",
+        "start_time": "00:00:00",
+        "end_time": "05:00:00",
+        "capacity": 30,
+        "is_peak": false,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "d8fbe64e-271f-42ea-a526-f6c0dcfd0123",
+        "gym_id": "10000000-0000-0000-0000-000000000004",
+        "day_of_week": 5,
+        "gender": "MALE",
+        "start_time": "05:00:00",
+        "end_time": "14:30:00",
+        "capacity": 30,
+        "is_peak": false,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "8e5a0ae5-ea5c-4fd9-bfd9-121f84c3384f",
+        "gym_id": "10000000-0000-0000-0000-000000000004",
+        "day_of_week": 6,
+        "gender": "MALE",
+        "start_time": "10:00:00",
+        "end_time": "18:00:00",
+        "capacity": 25,
+        "is_peak": true,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "509bb333-270d-4049-aed6-b8951d2a09de",
+        "gym_id": "10000000-0000-0000-0000-000000000004",
+        "day_of_week": 6,
+        "gender": "MALE",
+        "start_time": "00:00:00",
+        "end_time": "05:00:00",
+        "capacity": 25,
+        "is_peak": false,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      }
+    ],
+    "gyms": [
+      {
+        "id": "10000000-0000-0000-0000-000000000001",
+        "name_fa": "باشگاه بدنسازی کارو",
+        "tier": "BASIC",
+        "access_mode": "FEMALE_ONLY",
+        "city": "تهران",
+        "district": "نواب",
+        "address_fa": "خیابان قزوین، خیابان عباسی، پلاک ۴۲",
+        "latitude": "35.67200000",
+        "longitude": "51.38500000",
+        "geofence_radius_meters": 200,
+        "sheba_number": "IR430120000000000000000001",
+        "bank_account_holder": "محمد رستمی",
+        "phone": null,
+        "description_fa": null,
+        "images": [],
+        "is_active": true,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "10000000-0000-0000-0000-000000000002",
+        "name_fa": "مجموعه ورزشی ستاره ونک",
+        "tier": "PLUS",
+        "access_mode": "MALE_ONLY",
+        "city": "تهران",
+        "district": "ونک",
+        "address_fa": "میدان ونک، خیابان ملاصدرا، پلاک ۱۰",
+        "latitude": "35.75800000",
+        "longitude": "51.39800000",
+        "geofence_radius_meters": 150,
+        "sheba_number": "IR160120000000000000000002",
+        "bank_account_holder": "ستاره ورزش ایرانیان",
+        "phone": null,
+        "description_fa": null,
+        "images": [],
+        "is_active": true,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "10000000-0000-0000-0000-000000000003",
+        "name_fa": "باشگاه اکسیژن رویال",
+        "tier": "PREMIUM",
+        "access_mode": "MIXED",
+        "city": "تهران",
+        "district": "سعادت آباد",
+        "address_fa": "بلوار سرو غربی، خیابان صدف، مجتمع صدف",
+        "latitude": "35.78900000",
+        "longitude": "51.37200000",
+        "geofence_radius_meters": 150,
+        "sheba_number": "IR860120000000000000000003",
+        "bank_account_holder": "باشگاه اکسیژن پارس",
+        "phone": null,
+        "description_fa": null,
+        "images": [],
+        "is_active": true,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "10000000-0000-0000-0000-000000000004",
+        "name_fa": "کلاب ورزشی هتل اسپیناس پالاس",
+        "tier": "ELITE",
+        "access_mode": "MIXED",
+        "city": "تهران",
+        "district": "سعادت آباد",
+        "address_fa": "بیدستان یکم، هتل اسپیناس پالاس، طبقه -۲",
+        "latitude": "35.79500000",
+        "longitude": "51.36500000",
+        "geofence_radius_meters": 250,
+        "sheba_number": "IR590120000000000000000004",
+        "bank_account_holder": "هتل بین المللی اسپیناس",
+        "phone": null,
+        "description_fa": null,
+        "images": [],
+        "is_active": true,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      }
+    ],
+    "payment_transactions": [],
+    "plans": [
+      {
+        "id": "01e749e1-c1ef-4839-8ab8-6c5d3510b9f8",
+        "slug": "starter_15",
+        "title_fa": "پلن برنزی - ۱۵ اعتبار",
+        "price_tomans": "550000",
+        "credits_awarded": 15,
+        "validity_days": 30,
+        "rollover_percentage": "0.1000",
+        "max_rollover_credits": 2,
+        "is_active": true,
+        "sort_order": 1,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "d32e9755-023f-48b4-9c25-e421bea27e2f",
+        "slug": "standard_30",
+        "title_fa": "پلن نقره‌ای - ۳۰ اعتبار",
+        "price_tomans": "1000000",
+        "credits_awarded": 30,
+        "validity_days": 30,
+        "rollover_percentage": "0.1000",
+        "max_rollover_credits": 5,
+        "is_active": true,
+        "sort_order": 2,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "65ea8955-dac0-4ccd-9303-a9cdaaa27ec5",
+        "slug": "pro_60",
+        "title_fa": "پلن طلایی - ۶۰ اعتبار",
+        "price_tomans": "1900000",
+        "credits_awarded": 60,
+        "validity_days": 30,
+        "rollover_percentage": "0.1000",
+        "max_rollover_credits": 10,
+        "is_active": true,
+        "sort_order": 3,
+        "created_at": "2026-10-01T18:39:35.122Z"
+      }
+    ],
+    "settlement_batches": [
+      {
+        "id": "200af583-ba93-49cf-a6d0-fd29638779bb",
+        "gym_id": "10000000-0000-0000-0000-000000000001",
+        "cycle_start": "2026-08-31T20:30:00.000Z",
+        "cycle_end": "2026-09-30T20:30:00.000Z",
+        "total_visits": 10,
+        "total_amount_tomans": "500000",
+        "status": "APPROVED_FOR_PAYA",
+        "bank_reference_rrn": null,
+        "paya_tracking_id": null,
+        "disbursed_at": "2026-10-01T18:40:16.492Z",
+        "created_at": "2026-10-01T18:40:16.488Z"
+      },
+      {
+        "id": "6a9bd43b-1bb6-48d1-969d-3c713acbf95e",
+        "gym_id": "10000000-0000-0000-0000-000000000001",
+        "cycle_start": "1936-07-26T20:30:00.000Z",
+        "cycle_end": "1936-08-25T20:30:00.000Z",
+        "total_visits": 10,
+        "total_amount_tomans": "500000",
+        "status": "APPROVED_FOR_PAYA",
+        "bank_reference_rrn": null,
+        "paya_tracking_id": null,
+        "disbursed_at": "2026-10-01T18:43:20.001Z",
+        "created_at": "2026-10-01T18:43:19.997Z"
+      }
+    ],
+    "subscriptions": [],
+    "system_configs": [
+      {
+        "key": "global_max_payout_per_credit_ratio",
+        "value_json": {
+          "value": 32000
+        },
+        "description": "Golden Bounding Inequality derived ceiling for standard plan",
+        "updated_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "key": "default_rollover_percentage",
+        "value_json": {
+          "value": 0.1
+        },
+        "description": "Default partial rollover cap (10%)",
+        "updated_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "key": "default_max_rollover_credits",
+        "value_json": {
+          "value": 5
+        },
+        "description": "Maximum absolute credits that can roll over",
+        "updated_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "key": "default_cooldown_minutes",
+        "value_json": {
+          "value": 120
+        },
+        "description": "Minimum interval between visits at the same gym",
+        "updated_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "key": "default_club_monthly_visit_cap",
+        "value_json": {
+          "value": 4
+        },
+        "description": "Maximum visits allowed per month at a single specific club",
+        "updated_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "key": "impossible_velocity_kmh_threshold",
+        "value_json": {
+          "value": 70
+        },
+        "description": "Maximum feasible speed between two consecutive gym check-ins",
+        "updated_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "key": "qr_validity_seconds",
+        "value_json": {
+          "value": 45
+        },
+        "description": "Cryptographic validity lifetime of dynamic QR tokens",
+        "updated_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "key": "qr_nonce_retention_seconds",
+        "value_json": {
+          "value": 90
+        },
+        "description": "Replay-prevention nonce retention TTL in Redis",
+        "updated_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "key": "otp_resend_cooldown_seconds",
+        "value_json": {
+          "value": 60
+        },
+        "description": "SMS OTP re-dispatch interval cooldown",
+        "updated_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "key": "otp_max_attempts",
+        "value_json": {
+          "value": 5
+        },
+        "description": "Maximum failed OTP verification attempts before invalidation",
+        "updated_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "key": "default_peak_multiplier",
+        "value_json": {
+          "value": 1.25
+        },
+        "description": "Default multiplier for peak Sans credit pricing",
+        "updated_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "key": "variable_cost_per_subscriber_tomans",
+        "value_json": {
+          "value": 40000
+        },
+        "description": "Monthly direct variable cost per active subscriber (VC_sub)",
+        "updated_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "key": "variable_cost_per_checkin_tomans",
+        "value_json": {
+          "value": 500
+        },
+        "description": "Direct operational and messaging friction per check-in (VC_checkin)",
+        "updated_at": "2026-10-01T18:39:35.122Z"
+      }
+    ],
+    "users": [
+      {
+        "id": "00000000-0000-0000-0000-000000000001",
+        "phone_number": "09120000001",
+        "first_name": "مدیر",
+        "last_name": "سیستم",
+        "national_code": null,
+        "gender": "MALE",
+        "avatar_url": null,
+        "role": "SUPER_ADMIN",
+        "assigned_gym_id": null,
+        "status": "ACTIVE",
+        "created_at": "2026-10-01T18:39:35.122Z",
+        "updated_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "00000000-0000-0000-0000-000000000003",
+        "phone_number": "09120000003",
+        "first_name": "علی",
+        "last_name": "احمدی",
+        "national_code": null,
+        "gender": "MALE",
+        "avatar_url": null,
+        "role": "USER",
+        "assigned_gym_id": null,
+        "status": "ACTIVE",
+        "created_at": "2026-10-01T18:39:35.122Z",
+        "updated_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "00000000-0000-0000-0000-000000000004",
+        "phone_number": "09120000004",
+        "first_name": "سارا",
+        "last_name": "کرمی",
+        "national_code": null,
+        "gender": "FEMALE",
+        "avatar_url": null,
+        "role": "USER",
+        "assigned_gym_id": null,
+        "status": "ACTIVE",
+        "created_at": "2026-10-01T18:39:35.122Z",
+        "updated_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "00000000-0000-0000-0000-000000000002",
+        "phone_number": "09120000002",
+        "first_name": "رضا",
+        "last_name": "محمدی (پذیرش اسپیناس)",
+        "national_code": null,
+        "gender": "MALE",
+        "avatar_url": null,
+        "role": "GYM_STAFF",
+        "assigned_gym_id": "10000000-0000-0000-0000-000000000004",
+        "status": "ACTIVE",
+        "created_at": "2026-10-01T18:39:35.122Z",
+        "updated_at": "2026-10-01T18:39:35.122Z"
+      },
+      {
+        "id": "00000000-0000-0000-0000-64a613c36e11",
+        "phone_number": "09199079433",
+        "first_name": "تست",
+        "last_name": "همروندی",
+        "national_code": null,
+        "gender": "MALE",
+        "avatar_url": null,
+        "role": "USER",
+        "assigned_gym_id": null,
+        "status": "ACTIVE",
+        "created_at": "2026-10-01T18:40:16.162Z",
+        "updated_at": "2026-10-01T18:40:16.162Z"
+      },
+      {
+        "id": "00000000-0000-0000-0000-9d8b09baa4a4",
+        "phone_number": "09195937968",
+        "first_name": "تست",
+        "last_name": "همروندی",
+        "national_code": null,
+        "gender": "MALE",
+        "avatar_url": null,
+        "role": "USER",
+        "assigned_gym_id": null,
+        "status": "ACTIVE",
+        "created_at": "2026-10-01T18:41:49.197Z",
+        "updated_at": "2026-10-01T18:41:49.197Z"
+      },
+      {
+        "id": "00000000-0000-0000-0000-62266e7f8426",
+        "phone_number": "09199019009",
+        "first_name": "تست",
+        "last_name": "همروندی",
+        "national_code": null,
+        "gender": "MALE",
+        "avatar_url": null,
+        "role": "USER",
+        "assigned_gym_id": null,
+        "status": "ACTIVE",
+        "created_at": "2026-10-01T18:43:19.853Z",
+        "updated_at": "2026-10-01T18:43:19.853Z"
+      }
+    ]
+  }
+}

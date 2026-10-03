@@ -1,0 +1,12 @@
+# Ignore database, outputs, build and package logs
+node_modules/
+.next/
+dist/
+build/
+*.tsbuildinfo
+*.log
+apps/api/data/
+repomix-output.*
+graphify-out/
+account_visual_qa/
+visual_final_qa/

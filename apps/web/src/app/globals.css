@@ -1,0 +1,268 @@
+@import "tailwindcss";
+
+/* --------------------------------------------------------------------------
+   SELF-HOSTED VAZIRMATN FONT-FACE DEFINITIONS (Deterministic Local Loading)
+   -------------------------------------------------------------------------- */
+
+@font-face {
+  font-family: 'Vazirmatn';
+  src: url('/fonts/vazirmatn/Vazirmatn-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Vazirmatn';
+  src: url('/fonts/vazirmatn/Vazirmatn-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Vazirmatn';
+  src: url('/fonts/vazirmatn/Vazirmatn-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Vazirmatn';
+  src: url('/fonts/vazirmatn/Vazirmatn-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Vazirmatn';
+  src: url('/fonts/vazirmatn/Vazirmatn-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Vazirmatn';
+  src: url('/fonts/vazirmatn/Vazirmatn-ExtraBold.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Vazirmatn';
+  src: url('/fonts/vazirmatn/Vazirmatn-Black.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Vazirmatn with Native Farsi Digits */
+@font-face {
+  font-family: 'Vazirmatn-FD';
+  src: url('/fonts/vazirmatn/Vazirmatn-FD-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Vazirmatn-FD';
+  src: url('/fonts/vazirmatn/Vazirmatn-FD-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Vazirmatn-FD';
+  src: url('/fonts/vazirmatn/Vazirmatn-FD-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Vazirmatn-FD';
+  src: url('/fonts/vazirmatn/Vazirmatn-FD-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    color-scheme: dark;
+    --font-persian: 'Vazirmatn', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    --font-persian-fd: 'Vazirmatn-FD', 'Vazirmatn', sans-serif;
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+
+    /* -----------------------------------------------------------------------
+       GRAVITY DESIGN SYSTEM: GRAPHITE + LIME BRAND TOKENS
+       ----------------------------------------------------------------------- */
+    /* Backgrounds & Surfaces (Graphite Dark Neutral Scale) */
+    --gravity-bg: #0D0F10;
+    --gravity-surface: #15181B;
+    --gravity-surface-secondary: #1D2125;
+    --gravity-surface-elevated: #22272C;
+
+    /* Brand Accent Citron (Direction E / E2 — Calibrated Athletic Signature: FROZEN) */
+    --gravity-lime: #C8F500;
+    --gravity-lime-hover: #D6FB33;
+    --gravity-lime-active: #B3DC00;
+    --gravity-lime-muted: rgba(200, 245, 0, 0.12);
+    --gravity-on-primary: #0D0F11;
+
+    /* Text & Typography Hierarchy */
+    --gravity-text-primary: #F4F5F2;
+    --gravity-text-secondary: #C4C8CC;
+    --gravity-text-muted: #9CA3A8;
+    --gravity-text-disabled: #62686D;
+
+    /* Borders & Structural Dividers */
+    --gravity-border: #272B30;
+    --gravity-border-subtle: #202428;
+    --gravity-border-strong: #353B41;
+
+    /* Distinct Semantic Colors */
+    --gravity-success: #22C55E;
+    --gravity-warning: #F59E0B;
+    --gravity-danger: #EF4444;
+    --gravity-info: #38BDF8;
+
+    /* Legacy compatibility mappings */
+    --color-surface-bg: #0D0F10;
+    --color-surface-card: #15181B;
+    --color-primary-cobalt: #C8F500;
+    --color-primary-emerald: #22C55E;
+    --color-primary-violet: #8B5CF6;
+    --color-primary-amber: #F59E0B;
+  }
+
+  body {
+    direction: rtl;
+    text-align: right;
+    font-family: var(--font-persian);
+    background-color: var(--gravity-bg);
+    color: var(--gravity-text-primary);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  /* Custom Clean Dark Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0D0F10;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #272B30;
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #353B41;
+  }
+}
+
+/* Typography Helpers */
+.font-persian {
+  font-family: var(--font-persian);
+}
+
+.font-persian-digits {
+  font-family: var(--font-persian-fd);
+}
+
+.font-technical-mono {
+  font-family: var(--font-mono);
+  direction: ltr;
+  text-align: left;
+  display: inline-block;
+}
+
+/* Bidirectional Text Isolation */
+.bidi-isolate {
+  unicode-bidi: isolate;
+}
+
+/* Gravity System CSS Utilities */
+.bg-gravity-bg {
+  background-color: var(--gravity-bg);
+}
+
+.bg-gravity-surface {
+  background-color: var(--gravity-surface);
+}
+
+.bg-gravity-surface-secondary {
+  background-color: var(--gravity-surface-secondary);
+}
+
+.bg-gravity-surface-elevated {
+  background-color: var(--gravity-surface-elevated);
+}
+
+.text-gravity-lime {
+  color: var(--gravity-lime);
+}
+
+.border-gravity {
+  border-color: var(--gravity-border);
+}
+
+.border-gravity-strong {
+  border-color: var(--gravity-border-strong);
+}
+
+/* Custom Animation Utilities */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleUp {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-scale-up {
+  animation: scaleUp 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Accessibility: Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* RTL Utilities */
+.rtl-flip {
+  transform: scaleX(-1);
+}

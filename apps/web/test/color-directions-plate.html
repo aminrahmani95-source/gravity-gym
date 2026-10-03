@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="fa" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <title>Gravity Fitness — Color Direction Comparison Plates</title>
+  <style>
+    @font-face {
+      font-family: 'Vazirmatn';
+      src: url('/fonts/vazirmatn/Vazirmatn-Regular.woff2') format('woff2');
+      font-weight: 400;
+    }
+    @font-face {
+      font-family: 'Vazirmatn';
+      src: url('/fonts/vazirmatn/Vazirmatn-Bold.woff2') format('woff2');
+      font-weight: 700;
+    }
+    @font-face {
+      font-family: 'Vazirmatn';
+      src: url('/fonts/vazirmatn/Vazirmatn-Black.woff2') format('woff2');
+      font-weight: 900;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Vazirmatn', system-ui, -apple-system, sans-serif;
+      background: #060708;
+      color: #F4F5F2;
+      padding: 40px 24px;
+      line-height: 1.5;
+    }
+
+    .header {
+      text-align: center;
+      max-width: 900px;
+      margin: 0 auto 48px auto;
+    }
+
+    .header h1 {
+      font-size: 32px;
+      font-weight: 900;
+      margin-bottom: 12px;
+      letter-spacing: -0.5px;
+    }
+
+    .header p {
+      font-size: 14px;
+      color: #9CA3A8;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(4, 330px);
+      justify-content: center;
+      gap: 20px;
+      margin: 0 auto;
+    }
+
+    /* Common Card Styles */
+    .direction-card {
+      border-radius: 28px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+      border-width: 1px;
+      border-style: solid;
+      position: relative;
+      direction: rtl;
+      text-align: right;
+    }
+
+    .dir-badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 800;
+      padding: 4px 10px;
+      border-radius: 9999px;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+      width: fit-content;
+    }
+
+    .dir-title {
+      font-size: 20px;
+      font-weight: 900;
+      margin-bottom: 4px;
+    }
+
+    .dir-subtitle {
+      font-size: 11px;
+      line-height: 1.4;
+      margin-bottom: 16px;
+    }
+
+    /* Swatches */
+    .swatches {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+
+    .swatch {
+      height: 36px;
+      border-radius: 10px;
+      display: flex;
+      align-items: flex-end;
+      padding: 4px;
+      font-size: 9px;
+      font-family: monospace;
+      font-weight: bold;
+    }
+
+    /* Component Mock: Pricing Card */
+    .mock-card {
+      border-radius: 20px;
+      padding: 20px;
+      border-width: 1px;
+      border-style: solid;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .mock-btn {
+      width: 100%;
+      padding: 12px;
+      border-radius: 14px;
+      font-size: 13px;
+      font-weight: 900;
+      border: none;
+      cursor: pointer;
+      text-align: center;
+      transition: transform 0.1s ease;
+    }
+
+    .mock-tag {
+      font-size: 10px;
+      font-weight: 800;
+      padding: 3px 8px;
+      border-radius: 8px;
+      width: fit-content;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .mock-stat {
+      border-radius: 14px;
+      padding: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 11px;
+    }
+
+    /* =========================================================================
+       DIRECTION A: Volt Lime (High-Tech Athletic)
+       ========================================================================= */
+    .dir-a {
+      background: #0D0F11;
+      border-color: #2C323A;
+      color: #F5F7F8;
+    }
+    .dir-a .dir-badge {
+      background: rgba(184, 255, 44, 0.15);
+      color: #B8FF2C;
+      border: 1px solid rgba(184, 255, 44, 0.3);
+    }
+    .dir-a .dir-subtitle { color: #8E98A3; }
+    .dir-a .mock-card {
+      background: #16191D;
+      border-color: #B8FF2C;
+      box-shadow: 0 0 20px rgba(184, 255, 44, 0.08);
+    }
+    .dir-a .mock-btn {
+      background: #B8FF2C;
+      color: #0D0F11;
+    }
+    .dir-a .mock-tag {
+      background: #21262C;
+      color: #B8FF2C;
+      border: 1px solid rgba(184, 255, 44, 0.25);
+    }
+    .dir-a .mock-stat {
+      background: #21262C;
+      border: 1px solid #2C323A;
+    }
+    .dir-a .accent-text { color: #B8FF2C; font-weight: 900; }
+
+    /* =========================================================================
+       DIRECTION B: Hyper Emerald (Vitality & Endurance)
+       ========================================================================= */
+    .dir-b {
+      background: #0B0F12;
+      border-color: #26323B;
+      color: #F2F6F8;
+    }
+    .dir-b .dir-badge {
+      background: rgba(0, 229, 153, 0.15);
+      color: #00E599;
+      border: 1px solid rgba(0, 229, 153, 0.3);
+    }
+    .dir-b .dir-subtitle { color: #8A9BA8; }
+    .dir-b .mock-card {
+      background: #131A1F;
+      border-color: #00E599;
+      box-shadow: 0 0 20px rgba(0, 229, 153, 0.08);
+    }
+    .dir-b .mock-btn {
+      background: #00E599;
+      color: #0B0F12;
+    }
+    .dir-b .mock-tag {
+      background: #1D262D;
+      color: #00E599;
+      border: 1px solid rgba(0, 229, 153, 0.25);
+    }
+    .dir-b .mock-stat {
+      background: #1D262D;
+      border: 1px solid #26323B;
+    }
+    .dir-b .accent-text { color: #00E599; font-weight: 900; }
+
+    /* =========================================================================
+       DIRECTION C: Solar Blaze (Strength & Power)
+       ========================================================================= */
+    .dir-c {
+      background: #0F0E0D;
+      border-color: #332D28;
+      color: #F7F5F2;
+    }
+    .dir-c .dir-badge {
+      background: rgba(255, 107, 0, 0.15);
+      color: #FF6B00;
+      border: 1px solid rgba(255, 107, 0, 0.3);
+    }
+    .dir-c .dir-subtitle { color: #968E84; }
+    .dir-c .mock-card {
+      background: #191715;
+      border-color: #FF6B00;
+      box-shadow: 0 0 20px rgba(255, 107, 0, 0.08);
+    }
+    .dir-c .mock-btn {
+      background: #FF6B00;
+      color: #0F0E0D;
+    }
+    .dir-c .mock-tag {
+      background: #24211E;
+      color: #FF6B00;
+      border: 1px solid rgba(255, 107, 0, 0.25);
+    }
+    .dir-c .mock-stat {
+      background: #24211E;
+      border: 1px solid #332D28;
+    }
+    .dir-c .accent-text { color: #FF6B00; font-weight: 900; }
+
+    /* =========================================================================
+       DIRECTION D: Cobalt Frost (Precision Tech)
+       ========================================================================= */
+    .dir-d {
+      background: #0A0D12;
+      border-color: #253042;
+      color: #F3F6FA;
+    }
+    .dir-d .dir-badge {
+      background: rgba(56, 116, 255, 0.15);
+      color: #3874FF;
+      border: 1px solid rgba(56, 116, 255, 0.3);
+    }
+    .dir-d .dir-subtitle { color: #8694A6; }
+    .dir-d .mock-card {
+      background: #121720;
+      border-color: #3874FF;
+      box-shadow: 0 0 20px rgba(56, 116, 255, 0.08);
+    }
+    .dir-d .mock-btn {
+      background: #3874FF;
+      color: #FFFFFF;
+    }
+    .dir-d .mock-tag {
+      background: #1A2230;
+      color: #3874FF;
+      border: 1px solid rgba(56, 116, 255, 0.25);
+    }
+    .dir-d .mock-stat {
+      background: #1A2230;
+      border: 1px solid #253042;
+    }
+    .dir-d .accent-text { color: #3874FF; font-weight: 900; }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>GRAVITY FITNESS — COLOR DIRECTION COMPARISON</h1>
+    <p>بررسی تحلیلی و مقایسه بصری ۴ هویت رنگی مستقل برای پلتفرم گراویتی اسپرت</p>
+  </div>
+
+  <div class="grid-container">
+
+    <!-- DIRECTION A -->
+    <div class="direction-card dir-a">
+      <div>
+        <span class="dir-badge">مسیر ۱ (پیشنهادی Nike Volt)</span>
+        <h2 class="dir-title">Volt Lime</h2>
+        <p class="dir-subtitle">انرژی انفجاری، فناوری ورزشی و بالاترین سطح خوانایی در تاریکی</p>
+      </div>
+
+      <div class="swatches">
+        <div class="swatch" style="background: #0D0F11; color: #FFF;">BG</div>
+        <div class="swatch" style="background: #16191D; color: #FFF;">CARD</div>
+        <div class="swatch" style="background: #2C323A; color: #FFF;">BDR</div>
+        <div class="swatch" style="background: #B8FF2C; color: #000;">ACCENT</div>
+        <div class="swatch" style="background: #10B981; color: #000;">SUCC</div>
+      </div>
+
+      <div class="mock-card">
+        <div class="mock-tag">⚡ پلن استاندارد (۳۰ روزه)</div>
+        <div>
+          <div style="font-size: 14px; font-weight: 800;">پلن نقره‌ای ۳۰ اعتبار</div>
+          <div style="font-size: 20px; font-weight: 900; margin-top: 4px;">۱٬۰۰۰٬۰۰۰ <span style="font-size: 11px; font-weight: 400;">تومان / ماهانه</span></div>
+        </div>
+        <div class="mock-stat">
+          <span>اعتبار ماهانه:</span>
+          <span class="accent-text">۳۰ اعتبار</span>
+        </div>
+        <div class="mock-stat">
+          <span>کد پیگیری تراکنش:</span>
+          <span style="font-family: monospace; font-size: 10px;">RRN_01808596</span>
+        </div>
+        <button class="mock-btn">خرید و فعالسازی اشتراک</button>
+      </div>
+
+      <div style="font-size: 11px; line-height: 1.5; color: #8E98A3;">
+        <strong>ویژگی:</strong> هویت ورزشی محض، تمایز ۱۰۰٪ از نرم‌افزارهای مالی و SaaS معمولی.<br>
+        <strong>ریسک:</strong> مصرف بیش از اندازه خطر سقوط به استایل کریپتو/گیمینگ را دارد.
+      </div>
+    </div>
+
+    <!-- DIRECTION B -->
+    <div class="direction-card dir-b">
+      <div>
+        <span class="dir-badge">مسیر ۲ (Whoop / Endurance)</span>
+        <h2 class="dir-title">Hyper Emerald</h2>
+        <p class="dir-subtitle">حیات و استقامت ورزشی، بیومتریک و سلامت هوشمند با پرستیژ بالا</p>
+      </div>
+
+      <div class="swatches">
+        <div class="swatch" style="background: #0B0F12; color: #FFF;">BG</div>
+        <div class="swatch" style="background: #131A1F; color: #FFF;">CARD</div>
+        <div class="swatch" style="background: #26323B; color: #FFF;">BDR</div>
+        <div class="swatch" style="background: #00E599; color: #000;">ACCENT</div>
+        <div class="swatch" style="background: #0EA5E9; color: #000;">INFO</div>
+      </div>
+
+      <div class="mock-card">
+        <div class="mock-tag">🌿 پلن استاندارد (۳۰ روزه)</div>
+        <div>
+          <div style="font-size: 14px; font-weight: 800;">پلن نقره‌ای ۳۰ اعتبار</div>
+          <div style="font-size: 20px; font-weight: 900; margin-top: 4px;">۱٬۰۰۰٬۰۰۰ <span style="font-size: 11px; font-weight: 400;">تومان / ماهانه</span></div>
+        </div>
+        <div class="mock-stat">
+          <span>اعتبار ماهانه:</span>
+          <span class="accent-text">۳۰ اعتبار</span>
+        </div>
+        <div class="mock-stat">
+          <span>کد پیگیری تراکنش:</span>
+          <span style="font-family: monospace; font-size: 10px;">RRN_01808596</span>
+        </div>
+        <button class="mock-btn">خرید و فعالسازی اشتراک</button>
+      </div>
+
+      <div style="font-size: 11px; line-height: 1.5; color: #8A9BA8;">
+        <strong>ویژگی:</strong> ارگانیک، باوقار، مدرن، بدون خستگی چشم حتی در ساعات طولانی.<br>
+        <strong>ریسک:</strong> اگر خاکستری‌ها سرد باشد ممکن است شبیه اپلیکیشن‌های مدیکال شود.
+      </div>
+    </div>
+
+    <!-- DIRECTION C -->
+    <div class="direction-card dir-c">
+      <div>
+        <span class="dir-badge">مسیر ۳ (Gymshark / Power)</span>
+        <h2 class="dir-title">Solar Blaze</h2>
+        <p class="dir-subtitle">قدرت، حرارت، انضباط تمرین با وزنه و اقتدار صنعتی باشگاه‌های بدنسازی</p>
+      </div>
+
+      <div class="swatches">
+        <div class="swatch" style="background: #0F0E0D; color: #FFF;">BG</div>
+        <div class="swatch" style="background: #191715; color: #FFF;">CARD</div>
+        <div class="swatch" style="background: #332D28; color: #FFF;">BDR</div>
+        <div class="swatch" style="background: #FF6B00; color: #000;">ACCENT</div>
+        <div class="swatch" style="background: #10B981; color: #000;">SUCC</div>
+      </div>
+
+      <div class="mock-card">
+        <div class="mock-tag">🔥 پلن استاندارد (۳۰ روزه)</div>
+        <div>
+          <div style="font-size: 14px; font-weight: 800;">پلن نقره‌ای ۳۰ اعتبار</div>
+          <div style="font-size: 20px; font-weight: 900; margin-top: 4px;">۱٬۰۰۰٬۰۰۰ <span style="font-size: 11px; font-weight: 400;">تومان / ماهانه</span></div>
+        </div>
+        <div class="mock-stat">
+          <span>اعتبار ماهانه:</span>
+          <span class="accent-text">۳۰ اعتبار</span>
+        </div>
+        <div class="mock-stat">
+          <span>کد پیگیری تراکنش:</span>
+          <span style="font-family: monospace; font-size: 10px;">RRN_01808596</span>
+        </div>
+        <button class="mock-btn">خرید و فعالسازی اشتراک</button>
+      </div>
+
+      <div style="font-size: 11px; line-height: 1.5; color: #968E84;">
+        <strong>ویژگی:</strong> حس آهن سنگین و تمرین سخت، جذابیت بصری بسیار بالا و غیرتکراری.<br>
+        <strong>ریسک:</strong> می‌تواند تا حدی حس ساختمانی/کارگاهی دهد اگر اکسنت تراز نشود.
+      </div>
+    </div>
+
+    <!-- DIRECTION D -->
+    <div class="direction-card dir-d">
+      <div>
+        <span class="dir-badge">مسیر ۴ (Strava / Apple Elite)</span>
+        <h2 class="dir-title">Cobalt Frost</h2>
+        <p class="dir-subtitle">زیرساخت مطمئن، تله‌متری ورزشی حرفه‌ای، اعتبار سازمانی و اعتماد عمیق</p>
+      </div>
+
+      <div class="swatches">
+        <div class="swatch" style="background: #0A0D12; color: #FFF;">BG</div>
+        <div class="swatch" style="background: #121720; color: #FFF;">CARD</div>
+        <div class="swatch" style="background: #253042; color: #FFF;">BDR</div>
+        <div class="swatch" style="background: #3874FF; color: #FFF;">ACCENT</div>
+        <div class="swatch" style="background: #10B981; color: #000;">SUCC</div>
+      </div>
+
+      <div class="mock-card">
+        <div class="mock-tag">💎 پلن استاندارد (۳۰ روزه)</div>
+        <div>
+          <div style="font-size: 14px; font-weight: 800;">پلن نقره‌ای ۳۰ اعتبار</div>
+          <div style="font-size: 20px; font-weight: 900; margin-top: 4px;">۱٬۰۰۰٬۰۰۰ <span style="font-size: 11px; font-weight: 400;">تومان / ماهانه</span></div>
+        </div>
+        <div class="mock-stat">
+          <span>اعتبار ماهانه:</span>
+          <span class="accent-text">۳۰ اعتبار</span>
+        </div>
+        <div class="mock-stat">
+          <span>کد پیگیری تراکنش:</span>
+          <span style="font-family: monospace; font-size: 10px;">RRN_01808596</span>
+        </div>
+        <button class="mock-btn">خرید و فعالسازی اشتراک</button>
+      </div>
+
+      <div style="font-size: 11px; line-height: 1.5; color: #8694A6;">
+        <strong>ویژگی:</strong> نهایت اعتماد و پایداری برای مدیران و همکاران تجاری، آرام و باوقار.<br>
+        <strong>ریسک:</strong> پتانسیل شباهت به SaaS‌های مدیریت پروژه اگر به اندازه کافی اسپرت نباشد.
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
