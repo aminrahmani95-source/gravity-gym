@@ -9,6 +9,9 @@ const nextConfig: NextConfig = {
   basePath: isExport ? '/gravity-gym' : undefined,
   trailingSlash: true,
   images: { unoptimized: true },
+  env: {
+    NEXT_PUBLIC_BASE_PATH: isExport ? '/gravity-gym' : '',
+  },
   async headers() {
     if (isExport) return [];
     return [

@@ -99,18 +99,20 @@ export default function GymDiscoveryPage() {
     }
   };
 
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
   const getGymTierImage = (tier: GymTier) => {
     switch (tier) {
       case GymTier.BASIC:
-        return '/images/gym-caro.jpg';
+        return `${basePath}/images/gym-caro.jpg`;
       case GymTier.PLUS:
-        return '/images/gym-vanak.jpg';
+        return `${basePath}/images/gym-vanak.jpg`;
       case GymTier.PREMIUM:
-        return '/images/gym-oxygen.jpg';
+        return `${basePath}/images/gym-oxygen.jpg`;
       case GymTier.ELITE:
-        return '/images/gym-espinas.jpg';
+        return `${basePath}/images/gym-espinas.jpg`;
       default:
-        return '/images/hero-athletic.jpg';
+        return `${basePath}/images/hero-athletic.jpg`;
     }
   };
 
@@ -222,7 +224,7 @@ export default function GymDiscoveryPage() {
             {/* Right/Visual Column with High-Resolution Editorial Athletic Frame */}
             <div className="lg:col-span-5 relative min-h-[300px] lg:min-h-full overflow-hidden bg-[#0D0F10]">
               <img
-                src="/images/hero-athletic.jpg"
+                src={`${basePath}/images/hero-athletic.jpg`}
                 alt="ورزشکار حرفه‌ای گراویتی اسپرت"
                 className="absolute inset-0 h-full w-full object-cover object-center filter brightness-90 contrast-105"
                 loading="eager"

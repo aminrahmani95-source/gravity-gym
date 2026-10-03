@@ -1,3 +1,5 @@
+import { getMockFallback } from './mock-data';
+
 const API_BASE = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4000/api/v1';
 
 export interface ApiFetchOptions extends RequestInit {
@@ -43,6 +45,12 @@ export async function apiFetch<T = any>(endpoint: string, options: ApiFetchOptio
 
     return await response.json();
   } catch (err: any) {
+    // If backend is unreachable (e.g. hosted on GitHub Pages or offline), return mock fallback data seamlessly
+    const fallback = getMockFallback(endpoint);
+    if (fallback !== null) {
+      return fallback as T;
+    }
+
     if (err.name === 'AbortError') {
       throw new Error('مهلت زمانی ارتباط با سرور به پایان رسید. لطفاً وضعیت شبکه خود را بررسی نموده و مجدداً تلاش کنید.');
     }
